@@ -9,9 +9,9 @@
 
 不妨设总共有$N$个WAP即信号接收者，则第$i$个接收者的RSS可用下式表示~\cite{erceg1999empirically}：
 \begin{equation}
-{P_i} = C - 10\alpha {\log _{10}}({\left\| {{\mathbf{\theta}} - {{\mathbf{\mathrm{x}}_i}}} \right\|_2}) + {n_i}, i = 1,2,...,N,\label{eq:rss}
+{P_i} = C - 10\alpha {\log _{10}}({\left\| {{\bm{\theta}} - {{\bm{\mathrm{x}}_i}}} \right\|_2}) + {n_i}, i = 1,2,...,N,\label{eq:rss}
 \end{equation}
-其中$P_i$是接收者的RSS
+其中$P_i$是接收者的RSS，$\bm{\theta}$是发射源即用户的位置，$\alpha$是路径损耗指数，$C$是一个与$\bm{\theta}$ 和 $\bm{\mathrm{x}}_i$无关的常数，$n_i$则是均值为$0$、方差为${\sigma_i}^2$的高斯白噪声。
 
 
 
