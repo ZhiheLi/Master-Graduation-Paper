@@ -1,0 +1,286 @@
+\begin{thebibliography}{39}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\providecommand{\href}[2]{\url{#2}}
+\providecommand{\doi}[1]{DOI: \href{https://doi.org/#1}{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
+  \urlstyle{same}\fi
+
+\bibitem[Xiao\ et~al.(2016)Xiao, Zhou, Yi, and Ni]{xiao2016survey}
+Xiao J, Zhou Z, Yi Y, et~al.
+\newblock A survey on wireless indoor localization from the device
+  perspective\allowbreak[J].
+\newblock ACM Computing Surveys (CSUR), 2016, 49\penalty0 (2): 25.
+
+\bibitem[Vaghefi\ et~al.(2013)Vaghefi, Gholami, Buehrer, and
+  Strom]{vaghefi2013cooperative}
+Vaghefi R~M, Gholami M~R, Buehrer R~M, et~al.
+\newblock Cooperative received signal strength-based sensor localization with
+  unknown transmit powers\allowbreak[J].
+\newblock IEEE Transactions on Signal Processing, 2013, 61\penalty0 (6):
+  1389-1403.
+
+\bibitem[Jackson\ et~al.(2011)Jackson, Wang, and Inkol]{jackson2011received}
+Jackson B~R, Wang S, Inkol R.
+\newblock Received signal strength difference emitter geolocation least squares
+  algorithm comparison\allowbreak[C]//\allowbreak{}Electrical and Computer
+  Engineering (CCECE), 2011 24th Canadian Conference on.
+\newblock [S.l.]: IEEE, 2011: 001113-001118.
+
+\bibitem[Liu\ et~al.(2006)Liu, Lin, and Wu]{liu2006analysis}
+Liu B~C, Lin K~H, Wu J~C.
+\newblock Analysis of hyperbolic and circular positioning algorithms using
+  stationary signal-strength-difference measurements in wireless
+  communications\allowbreak[J].
+\newblock IEEE Transactions on Vehicular Technology, 2006, 55\penalty0 (2):
+  499-509.
+
+\bibitem[Bahl\ et~al.(2000)Bahl and Padmanabhan]{bahl2000radar}
+Bahl P, Padmanabhan V~N.
+\newblock Radar: An in-building rf-based user location and tracking
+  system\allowbreak[C]//\allowbreak{}INFOCOM 2000. Nineteenth Annual Joint
+  Conference of the IEEE Computer and Communications Societies. Proceedings.
+  IEEE: volume~2.
+\newblock [S.l.]: Ieee, 2000: 775-784.
+
+\bibitem[Guvenc\ et~al.(2009)Guvenc and Chong]{guvenc2009survey}
+Guvenc I, Chong C~C.
+\newblock A survey on toa based wireless localization and nlos mitigation
+  techniques\allowbreak[J].
+\newblock IEEE Communications Surveys \& Tutorials, 2009, 11\penalty0 (3).
+
+\bibitem[Catovic\ et~al.(2004)Catovic and Sahinoglu]{catovic2004cramer}
+Catovic A, Sahinoglu Z.
+\newblock The cramer-rao bounds of hybrid toa/rss and tdoa/rss location
+  estimation schemes\allowbreak[J].
+\newblock IEEE Communications Letters, 2004, 8\penalty0 (10): 626-628.
+
+\bibitem[Cong\ et~al.(2002)Cong and Zhuang]{cong2002hybrid}
+Cong L, Zhuang W.
+\newblock Hybrid tdoa/aoa mobile user location for wideband cdma cellular
+  systems\allowbreak[J].
+\newblock IEEE Transactions on Wireless Communications, 2002, 1\penalty0 (3):
+  439-447.
+
+\bibitem[Junglas\ et~al.(2008)Junglas and Watson]{junglas2008location}
+Junglas I~A, Watson R~T.
+\newblock Location-based services\allowbreak[J].
+\newblock Communications of the ACM, 2008, 51\penalty0 (3): 65.
+
+\bibitem[赵杨\ 等(2018)赵杨, 袁析妮, 陈亚文, and
+  武立强]{赵杨2018基于机器学习混合算法的}
+赵杨, 袁析妮, 陈亚文, 等.
+\newblock 基于机器学习混合算法的 app
+  广告转化率预测研究\allowbreak[J].
+\newblock 数据分析与知识发现, 2018, 2\penalty0 (11): 2-9.
+
+\bibitem[Korula\ et~al.(2016)Korula, Mirrokni, and
+  Nazerzadeh]{korula2016optimizing}
+Korula N, Mirrokni V~S, Nazerzadeh H.
+\newblock Optimizing display advertising markets: Challenges and
+  directions.\allowbreak[J].
+\newblock IEEE Internet Computing, 2016, 20\penalty0 (1): 28-35.
+
+\bibitem[McAfee\ et~al.(2013)McAfee, Papineni, and
+  Vassilvitskii]{mcafee2013maximally}
+McAfee R~P, Papineni K, Vassilvitskii S.
+\newblock Maximally representative allocations for guaranteed delivery
+  advertising campaigns\allowbreak[J].
+\newblock Review of Economic Design, 2013, 17\penalty0 (2): 83-94.
+
+\bibitem[Wang\ et~al.(2011)Wang and Inkol]{wang2011near}
+Wang S, Inkol R.
+\newblock A near-optimal least squares solution to received signal strength
+  difference based geolocation\allowbreak[C]//\allowbreak{}Acoustics, Speech
+  and Signal Processing (ICASSP), 2011 IEEE International Conference on.
+\newblock [S.l.]: IEEE, 2011: 2600-2603.
+
+\bibitem[Gentile\ et~al.(2012)Gentile, Alsindi, Raulefs, and
+  Teolis]{gentile2012geolocation}
+Gentile C, Alsindi N, Raulefs R, et~al.
+\newblock Geolocation techniques: Principles and applications\allowbreak[M].
+\newblock [S.l.]: Springer Science \& Business Media, 2012
+
+\bibitem[Xia\ et~al.(2017)Xia, Liu, Yuan, Zhu, and Wang]{xia2017indoor}
+Xia S, Liu Y, Yuan G, et~al.
+\newblock Indoor fingerprint positioning based on wi-fi: an
+  overview\allowbreak[J].
+\newblock ISPRS International Journal of Geo-Information, 2017, 6\penalty0 (5):
+  135.
+
+\bibitem[Yen\ et~al.(2017)Yen, Yan, Renu, Belay, Lin, and Ye]{yen2017modified}
+Yen L, Yan C~H, Renu S, et~al.
+\newblock A modified wknn indoor wi-fi localization method with differential
+  coordinates\allowbreak[C]//\allowbreak{}Applied System Innovation (ICASI),
+  2017 International Conference on.
+\newblock [S.l.]: IEEE, 2017: 1822-1824.
+
+\bibitem[Marques\ et~al.(2012)Marques, Meneses, and
+  Moreira]{marques2012combining}
+Marques N, Meneses F, Moreira A.
+\newblock Combining similarity functions and majority rules for multi-building,
+  multi-floor, wifi positioning\allowbreak[C]//\allowbreak{}Indoor Positioning
+  and Indoor Navigation (IPIN), 2012 International Conference on.
+\newblock [S.l.]: IEEE, 2012: 1-9.
+
+\bibitem[Han\ et~al.(2015)Han, Zhao, Meng, and Li]{han2015cosine}
+Han S, Zhao C, Meng W, et~al.
+\newblock Cosine similarity based fingerprinting algorithm in wlan indoor
+  positioning against device
+  diversity\allowbreak[C]//\allowbreak{}Communications (ICC), 2015 IEEE
+  International Conference on.
+\newblock [S.l.]: IEEE, 2015: 2710-2714.
+
+\bibitem[Torres-Sospedra\ et~al.(2015)Torres-Sospedra, Montoliu, Trilles,
+  Belmonte, and Huerta]{torres2015comprehensive}
+Torres-Sospedra J, Montoliu R, Trilles S, et~al.
+\newblock Comprehensive analysis of distance and similarity measures for wi-fi
+  fingerprinting indoor positioning systems\allowbreak[J].
+\newblock Expert Systems with Applications, 2015, 42\penalty0 (23): 9263-9278.
+
+\bibitem[Simard\ et~al.(1998)Simard, LeCun, Denker, and
+  Victorri]{simard1998transformation}
+Simard P~Y, LeCun Y~A, Denker J~S, et~al.
+\newblock Transformation invariance in pattern recognition—tangent distance
+  and tangent propagation\allowbreak[M]//\allowbreak{}Neural networks: tricks
+  of the trade.
+\newblock [S.l.]: Springer, 1998: 239-274
+
+\bibitem[Roweis\ et~al.(2000)Roweis and Saul]{roweis2000nonlinear}
+Roweis S~T, Saul L~K.
+\newblock Nonlinear dimensionality reduction by locally linear
+  embedding\allowbreak[J].
+\newblock science, 2000, 290\penalty0 (5500): 2323-2326.
+
+\bibitem[Xu\ et~al.(2015)Xu, Lee, Li, Qi, and Lu]{xu2015smart}
+Xu J, Lee K~c, Li W, et~al.
+\newblock Smart pacing for effective online ad campaign
+  optimization\allowbreak[C]//\allowbreak{}Proceedings of the 21th ACM SIGKDD
+  International Conference on Knowledge Discovery and Data Mining.
+\newblock [S.l.]: ACM, 2015: 2217-2226.
+
+\bibitem[Mehta\ et~al.(2005)Mehta, Saberi, Vazirani, and
+  Vazirani]{mehta2005adwords}
+Mehta A, Saberi A, Vazirani U, et~al.
+\newblock Adwords and generalized on-line
+  matching\allowbreak[C]//\allowbreak{}46th Annual IEEE Symposium on
+  Foundations of Computer Science (FOCS'05).
+\newblock [S.l.]: IEEE, 2005: 264-273.
+
+\bibitem[Feldman\ et~al.(2010)Feldman, Henzinger, Korula, Mirrokni, and
+  Stein]{feldman2010online}
+Feldman J, Henzinger M, Korula N, et~al.
+\newblock Online stochastic packing applied to display ad
+  allocation\allowbreak[C]//\allowbreak{}European Symposium on Algorithms.
+\newblock [S.l.]: Springer, 2010: 182-194.
+
+\bibitem[Devanur\ et~al.(2009)Devanur and Hayes]{devanur2009adwords}
+Devanur N~R, Hayes T~P.
+\newblock The adwords problem: online keyword matching with budgeted bidders
+  under random permutations\allowbreak[C]//\allowbreak{}Proceedings of the 10th
+  ACM conference on Electronic commerce.
+\newblock [S.l.]: ACM, 2009: 71-78.
+
+\bibitem[Turner(2012)]{turner2012planning}
+Turner J.
+\newblock The planning of guaranteed targeted display
+  advertising\allowbreak[J].
+\newblock Operations research, 2012, 60\penalty0 (1): 18-33.
+
+\bibitem[Chen\ et~al.(2011)Chen, Berkhin, Anderson, and Devanur]{chen2011real}
+Chen Y, Berkhin P, Anderson B, et~al.
+\newblock Real-time bidding algorithms for performance-based display ad
+  allocation\allowbreak[C]//\allowbreak{}Proceedings of the 17th ACM SIGKDD
+  international conference on Knowledge discovery and data mining.
+\newblock [S.l.]: ACM, 2011: 1307-1315.
+
+\bibitem[Devanur\ et~al.(2011)Devanur, Jain, Sivan, and
+  Wilkens]{devanur2011near}
+Devanur N~R, Jain K, Sivan B, et~al.
+\newblock Near optimal online algorithms and fast approximation algorithms for
+  resource allocation problems\allowbreak[C]//\allowbreak{}Proceedings of the
+  12th ACM conference on Electronic commerce.
+\newblock [S.l.]: ACM, 2011: 29-38.
+
+\bibitem[Alaei\ et~al.(2012)Alaei, Hajiaghayi, and Liaghat]{alaei2012online}
+Alaei S, Hajiaghayi M, Liaghat V.
+\newblock Online prophet-inequality matching with applications to ad
+  allocation\allowbreak[C]//\allowbreak{}Proceedings of the 13th ACM Conference
+  on Electronic Commerce.
+\newblock [S.l.]: ACM, 2012: 18-35.
+
+\bibitem[Karande\ et~al.(2013)Karande, Mehta, and
+  Srikant]{karande2013optimizing}
+Karande C, Mehta A, Srikant R.
+\newblock Optimizing budget constrained spend in search
+  advertising\allowbreak[C]//\allowbreak{}Proceedings of the sixth ACM
+  international conference on Web search and data mining.
+\newblock [S.l.]: ACM, 2013: 697-706.
+
+\bibitem[Agarwal\ et~al.(2014)Agarwal, Ghosh, Wei, and You]{agarwal2014budget}
+Agarwal D, Ghosh S, Wei K, et~al.
+\newblock Budget pacing for targeted online advertisements at
+  linkedin\allowbreak[C]//\allowbreak{}Proceedings of the 20th ACM SIGKDD
+  international conference on Knowledge discovery and data mining.
+\newblock [S.l.]: ACM, 2014: 1613-1619.
+
+\bibitem[Bharadwaj\ et~al.(2012)Bharadwaj, Chen, Ma, Nagarajan, Tomlin,
+  Vassilvitskii, Vee, and Yang]{bharadwaj2012shale}
+Bharadwaj V, Chen P, Ma W, et~al.
+\newblock Shale: an efficient algorithm for allocation of guaranteed display
+  advertising\allowbreak[C]//\allowbreak{}Proceedings of the 18th ACM SIGKDD
+  international conference on Knowledge discovery and data mining.
+\newblock [S.l.]: ACM, 2012: 1195-1203.
+
+\bibitem[Vee\ et~al.(2010)Vee, Vassilvitskii, and
+  Shanmugasundaram]{Vee2010Optimal}
+Vee E, Vassilvitskii S, Shanmugasundaram J.
+\newblock Optimal online assignment with
+  forecasts\allowbreak[C]//\allowbreak{}Acm Conference on Electronic Commerce.
+\newblock [S.l.: s.n.], 2010.
+
+\bibitem[Agrawal\ et~al.(2014)Agrawal, Wang, and Ye]{agrawal2014dynamic}
+Agrawal S, Wang Z, Ye Y.
+\newblock A dynamic near-optimal algorithm for online linear
+  programming\allowbreak[J].
+\newblock Operations Research, 2014, 62\penalty0 (4): 876-890.
+
+\bibitem[Huang\ et~al.(2016)Huang, Jenatton, and Archambeau]{huang2016online}
+Huang J~C, Jenatton R, Archambeau C.
+\newblock Online dual decomposition for performance and delivery-based
+  distributed ad allocation\allowbreak[C]//\allowbreak{}Proceedings of the 22nd
+  ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.
+\newblock [S.l.]: ACM, 2016: 117-126.
+
+\bibitem[Kesselheim\ et~al.(2014)Kesselheim, T{\"o}nnis, Radke, and
+  V{\"o}cking]{kesselheim2014primal}
+Kesselheim T, T{\"o}nnis A, Radke K, et~al.
+\newblock Primal beats dual on online packing lps in the random-order
+  model\allowbreak[C]//\allowbreak{}Proceedings of the forty-sixth annual ACM
+  symposium on Theory of computing.
+\newblock [S.l.]: ACM, 2014: 303-312.
+
+\bibitem[Lee\ et~al.(2013)Lee, Jalali, and Dasdan]{lee2013real}
+Lee K~C, Jalali A, Dasdan A.
+\newblock Real time bid optimization with smooth budget delivery in online
+  advertising\allowbreak[C]//\allowbreak{}Proceedings of the Seventh
+  International Workshop on Data Mining for Online Advertising.
+\newblock [S.l.]: ACM, 2013: 1.
+
+\bibitem[Chapelle\ et~al.(2015)Chapelle, Manavoglu, and
+  Rosales]{chapelle2015simple}
+Chapelle O, Manavoglu E, Rosales R.
+\newblock Simple and scalable response prediction for display
+  advertising\allowbreak[J].
+\newblock ACM Transactions on Intelligent Systems and Technology (TIST), 2015,
+  5\penalty0 (4): 61.
+
+\bibitem[Erceg\ et~al.(1999)Erceg, Greenstein, Tjandra, Parkoff, Gupta, Kulic,
+  Julius, and Bianchi]{erceg1999empirically}
+Erceg V, Greenstein L~J, Tjandra S~Y, et~al.
+\newblock An empirically based path loss model for wireless channels in
+  suburban environments\allowbreak[J].
+\newblock IEEE Journal on selected areas in communications, 1999, 17\penalty0
+  (7): 1205-1211.
+
+\end{thebibliography}

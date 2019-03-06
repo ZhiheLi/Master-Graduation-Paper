@@ -1,0 +1,94 @@
+\thusetup{
+  %******************************
+  % 注意：
+  %   1. 配置里面不要出现空行
+  %   2. 不需要的配置信息可以删除
+  %******************************
+  %
+  %=====
+  % 秘级
+  %=====
+  secretlevel={秘密},
+  secretyear={10},
+  %
+  %=========
+  % 中文信息
+  %=========
+  ctitle={基于用户定位的广告投放服务研究},
+  cdegree={工学硕士},
+  cdepartment={电子工程系},
+  cmajor={信息与通信工程},
+  cauthor={李知赫},
+  csupervisor={钟晓峰副研究员},
+  % 日期自动使用当前时间，若需指定按如下方式修改：
+  cdate={二〇一九年四月},
+  %
+  % 博士后专有部分
+  cfirstdiscipline={计算机科学与技术},
+  cseconddiscipline={系统结构},
+  postdoctordate={2009年7月——2011年7月},
+  id={编号}, % 可以留空： id={},
+  udc={UDC}, % 可以留空
+  catalognumber={分类号}, % 可以留空
+  %
+  %=========
+  % 英文信息
+  %=========
+  etitle={Research on the Information Push Service Based on Users' Location},
+  % 这块比较复杂，需要分情况讨论：
+  % 1. 学术型硕士
+  %    edegree：必须为Master of Arts或Master of Science（注意大小写）
+  %             “哲学、文学、历史学、法学、教育学、艺术学门类，公共管理学科
+  %              填写Master of Arts，其它填写Master of Science”
+  %    emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+  % 2. 专业型硕士
+  %    edegree：“填写专业学位英文名称全称”
+  %    emajor：“工程硕士填写工程领域，其它专业学位不填写此项”
+  % 3. 学术型博士
+  %    edegree：Doctor of Philosophy（注意大小写）
+  %    emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+  % 4. 专业型博士
+  %    edegree：“填写专业学位英文名称全称”
+  %    emajor：不填写此项
+  edegree={Master of Science},
+  emajor={Electronics Science and Technology},
+  eauthor={Li Zhihe},
+  esupervisor={Associate Research Fellow Zhong Xiaofeng},
+  % 日期自动生成，若需指定按如下方式修改：
+  edate={April, 2019}
+  %
+  % 关键词用“英文逗号”分割
+  % ckeywords={\TeX, \LaTeX, CJK, 模板, 论文},
+  % ekeywords={\TeX, \LaTeX, CJK, template, thesis}
+}
+
+% 定义中英文摘要和关键字
+\begin{cabstract}
+  随着智能手机与移动互联网的高速发展，在定位精度日益精准的情况下，基于用户定位的网络服务呈现出蓬勃的发展，尤其是随着互联网公司的发展步伐加快，基于用户定位的广告投放服务获得了与日俱增的关注。然而目前主要依赖导航卫星定位的方式只能在用户接收端定位解算且在室内等卫星信号弱的地方定位精度较差。此外，在已经根据用户位置筛选出广告投放候选用户群的情况下，如何在保证投放量的同时尽可能得到最优投放效果也是一个有待研究的问题。为了解决上述问题，我们提出了一种基于用户定位的广告投放服务机制，它只需要用户手机或者无线网络接入点的接收信号强度实现用户定位，并且可以获得更好的广告投放效果。在本文中，我们先提出了两种用户定位方法，分别是以用户作为信号发射源的定位解算算法和以用户作为信号接收端的指纹定位算法，二者相比于各自方向的经典算法均能提高定位精准度。在获得用户位置之后，我们提出一种基于凸优化的保量推荐下的最优广告投放算法，在提高投放效果的同时还有较低的在线计算复杂度。
+
+  本文的主要贡献如下：
+  \begin{itemize}
+    \item 提出一种新的定位算法实现对发射源定位，并分析其克拉美罗下界（Cram\'{e}r-Rao Lower Bound）和置信区间。仿真实验和实测数据实验证实我们的新算法可以取得比经典算法更小的误差；
+    \item 将切线距离引入指纹定位的距离度量方法，并提出基于曼哈顿距离的切线距离的计算方法及其近似算法。通过在校园内采集的接收信号强度数据上开展实验，验证了切线距离相比于简单距离度量方式可以提高定位精度；
+    \item 给出一种保量推荐下的最优广告投放算法，基于凸优化原理推导出广告投放方案，并介绍一些工程实现细节增强算法的稳健性和适用性。仿真实验证实了该算法相比于简单贪心算法可以获得巨大的投放效果提升。该算法被部署在快手短视频平台上，持续一个月的线上实验表明该算法在关键指标上优于之前部署的算法且性能可以经受住大流量的考验。
+  \end{itemize}
+
+
+\end{cabstract}
+
+% 如果习惯关键字跟在摘要文字后面，可以用直接命令来设置，如下：
+\ckeywords{定位, 保量推荐, 最优投放，优化算法, 接收信号强度}
+
+\begin{eabstract}
+   With the rapid development of smartphones and mobile Internet, the network service based on users' location is developing vigorously in the case that localization technology is becoming increasingly accurate. In particular, the information allocation service based on users' location has drawn increasing attention with the acceleration in the step of Internet companies' development. However, the current main localization technology is based on satellite signal and location can only be computed at users' clients. Furthermore, the localization accuracy will decrease severely when the satellites' signal is weak, such as in indoor localization. Afterward, suppose that the candidate user group has been selected according to their location, to whom we will allocate information. The algorithm which can achieve an optimal allocation effect with allocation quantity guaranteed should be studied and analyzed. In order to solve problems above, we proposed an information allocation service mechanism based on users' location, where localization only needs the received signal strength of users' mobile phone or wireless access points and information allocation effect is better. In this article, firstly we propose two user localization algorithms with respect to localizing user as a signal transmitter and localizing user as a receiver with Fingerprint localization. These two algorithms outperforms the classical algorithms in each field. After users' location is achieved, we propose an optimal information allocation algorithm based on convex optimiaztion with allocation quantity guaranteed, which can improve allocation effect with low online computational complexity. 
+   
+   The main contributions of this article are as follows:
+   \begin{itemize}
+   	\item We propose a novel localization algorithm to localize transmitters. The Cram\'{e}r-Rao Lower Bound and confidence interval are analyzed. Experiments based on simulation and real data verify that our algorithm can achieve less error compared with classical algorithm.
+   	\item We introduce the tangent distance to the distance metrics of Fingerprint localization. Meanwhile, computational method of the tangent distance based on the Manhattan distance and its approximate computational method are proposed. Experiments are carried out with received signal strength data collected on campus, which verify that tangent distance can improve the accuracy of localization compared with simple distance metrics.
+   	\item We propose an optimal information allocation algorithm with allocation quantity guaranteed. Allocation strategy is derived with convex optimization theory and some engineering details are also introduced to make the algorithm more robust and generalized. Simulation reveals the significant performance improvement than the existed greedy algorithms. Afterwards, the algorithm was deployed at Kwai video platform for a month. The result of the online experiment demonstrates that the algorithm outperforms the previously deployed algorithm on key metrics and it is applicable for huge network traffic. 
+   \end{itemize}
+   
+\end{eabstract}
+
+\ekeywords{localization, guaranteed delivery advertising, optimal allocation, optimization algorithm, received signal strength}

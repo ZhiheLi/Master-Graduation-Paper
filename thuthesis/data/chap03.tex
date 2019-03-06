@@ -1,0 +1,17 @@
+\chapter{基于接收信号强度的几何模型发射源定位算法}
+\label{cha:transmitter}
+
+本章将要介绍基于接收信号强度的几何模型发射源定位算法，即用户作为信号发射源时实现对用户定位的算法。具体应用场景可以描述为：一个用户终端以恒定功率发射信号（比如蜂窝网或WLAN中用户上行通信），通信范围内的多个WAP（基站或是无线路由器）接收到信号并测得RSS，最后根据这些RSS实现对用户定位。
+
+\section{路径损耗模型和估计器}
+
+\subsection{路径损耗模型}
+
+不妨设总共有$N$个WAP即信号接收者，则第$i$个接收者的RSS可用下式表示~\cite{erceg1999empirically}：
+\begin{equation}
+{P_i} = C - 10\alpha {\log _{10}}({\left\| {{\mathbf{\theta}} - {{\mathbf{\mathrm{x}}_i}}} \right\|_2}) + {n_i}, i = 1,2,...,N,\label{eq:rss}
+\end{equation}
+其中$P_i$是接收者的RSS
+
+
+
