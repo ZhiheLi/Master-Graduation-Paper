@@ -11,7 +11,85 @@
 \begin{equation}
 {P_i} = C - 10\alpha {\log _{10}}({\left\| {{\bm{\theta}} - {{\bm{\mathrm{x}}_i}}} \right\|_2}) + {n_i}, i = 1,2,...,N,\label{eq:rss}
 \end{equation}
-其中$P_i$是接收者的RSS，$\bm{\theta}$是发射源即用户的位置，$\alpha$是路径损耗指数，$C$是一个与$\bm{\theta}$ 和 $\bm{\mathrm{x}}_i$无关的常数，$n_i$则是均值为$0$、方差为${\sigma_i}^2$的高斯白噪声。
+其中$P_i$是接收者的RSS，$\bm{\theta}$是发射源即用户的位置，$\alpha$是路径损耗指数，$C$是一个与$\bm{\theta}$ 和 $\bm{\mathrm{x}}_i$无关的常数，$n_i$则是均值为$0$、方差为${\sigma_i}^2$的高斯白噪声。为了简化表达，我们用下式代表发射源与接收端之间的距离：
+\begin{equation}
+d_i = {\left\| {{\bm{\theta}} - {{\bm{\mathrm{x}}_i}}} \right\|_2}, \forall i. \label{d}
+\end{equation}
+因为$C$是常数，所以它可以通过与另一个接收者的RSS相减被消除，即：
+\begin{equation}
+{P_{ij}} = 10\alpha ({\log _{10}}d_j - {\log _{10}}d_i) + {n_{ij}}, i \neq j, \label{eq:diff_rss}
+\end{equation}
+其中$P_{ij} = P_i - P_j$，$n_{ij}$变为$0$均值、方差为$\sigma_i^2 + \sigma_j^2$的高斯白噪声。注意到，因为我们没有锚点，因此这里让$i$作为RSS最大的接收者的下标。为了使表达更清晰，在接下来的部分我们将用$\bm{\mathrm{x}}_M, d_M$代表$\bm{\mathrm{x}}_i, d_i$。
+
+\subsection{传统最大似然估计器}
+
+传统最大似然（Maximum Likelihood, ML）估计器通过求解如下优化问题从而找到定位$\bm{\hat{\theta}}$：
+\begin{equation}
+\widehat {\bm{\theta }} = \mathop {\arg \min }\limits_{\bm{\theta }} \sum\limits_{j = 1}^N {{{[{P_{Mj}} - 10\alpha ({{\log }_{10}}d_j - {{\log }_{10}}d_M)]}^2}}, j \neq M. \label{eq:ml}
+\end{equation}
+因为这是一个非凸优化问题，许多凸优化估计器（比如半正定规划）和线性最小二乘估计被提出，正如第\ref{cha:intro}章所述。因为ML估计器是作为算法比较基准线的，我们需要选择一个能够取得最小误差的作为基准，因此直接优化非凸的非线性最小二乘问题。为了尽可能找到最优解，我们会多次随机初始点，选择损失函数最小的作为最终定位。
+
+\subsection{基于几何的模型}
+
+S. Wang 和 R. Inkol~\cite{wang2011near} 提出了一种线性最小二乘估计器，在推导过程中发现每两个接收端RSS可以形成一个发射源坐落在其上的圆。但是这个结论没有被作者直接用来优化，而是提出了一种线性最小二乘法。接下来我们将用这个知识得到基于几何的模型（Geometry-Based Model, GBM）。
+
+如果我们忽略\eqref{eq:diff_rss}中的噪声项，可以得到：
+\begin{equation}
+{P_{ij}} - 5\alpha {\log _{10}}({\dfrac{d_j}{d_i}})^2 = 0, i \neq j. \label{eq:ignore}
+\end{equation}
+令：
+\begin{equation}
+\gamma = 10^{\frac{P_{ij}}{5\alpha}}, \label{eq:gamma}
+\end{equation}
+则\eqref{eq:ignore}可以被改写为：
+\begin{equation}
+{\left\| {\bm{\theta}  - \bm{\mathrm{x}}_j} \right\|_2}^2 = {\gamma _{ij}}{\left\| {\bm{\theta}  - \bm{\mathrm{x}}_i} \right\|_2}^2. \label{eq:10exp}
+\end{equation}
+如果 $\gamma _{ij} \neq 1$，即两个接收端的RSS不相等，\eqref{eq:10exp}可以被改写为：
+\begin{equation}
+{\left\| {\bm{\theta}  - \frac{\bm{\mathrm{x}}_j - \gamma_{ij}\bm{\mathrm{x}}_i}{1 - \gamma_{ij}}} \right\|_2}^2 = \frac{\gamma_{ij}{d_{ij}}^2}{(1 - \gamma_{ij})^2}, \label{eq:circle}
+\end{equation}
+其中$d_{ij} = \left\| \bm{\mathrm{x}}_i  - \bm{\mathrm{x}}_j \right\|_2$。显然这是一个$\bm{\theta}$坐落在其边缘上的圆，而圆心和半径分别为：
+\begin{equation}
+\bm{\mathrm{o}}_j = \frac{\bm{\mathrm{x}}_j - \gamma_{ij}\bm{\mathrm{x}}_i}{1 - \gamma_{ij}}, {r_j}^2 = \frac{\gamma_{ij}{d_{ij}}^2}{(1 - \gamma_{ij})^2}. \label{eq:oR}
+\end{equation}
+
+让$i$座位最大RSS接收端的下标（如果有多于1个最大RSS，则随机挑选一个而提出其余的）并用$M$替换$i$。假设\eqref{eq:circle}被下面的加性噪声影响：
+\begin{equation}
+{\left\| {\bm{\theta}  - o_j} \right\|_2}^2 = d_j + n_j, j \neq M, \label{eq:GBMnoise}
+\end{equation}
+其中$n_j$是一个服从均值为$0$、方差为$\sigma_j^2$的截断高斯分布的噪声。因为$\bm{\theta}$是实数，因此\eqref{eq:GBMnoise}等式右边必须大于等于$0$，即$n_j$的取值范围是 $[-d_j, +\infty)$。所以我们建立了一个带有噪声$n_j$的模型，服从截断高斯分布。注意到这里的$n_j$与\eqref{eq:rss}中的噪声无关，因为这是两个独立的模型。
+
+利用上述模型，我们可以定义一个服从截断高斯分布的随机变量$X_j = \left\|{\bm\theta} - \bm{\mathrm{o}}_j\right\|_2$，其概率密度函数是：
+\begin{equation}
+f(x_j) = \frac{1}{C(r_j)}\exp(-\frac{(x_j - r_j)^2}{2{\sigma_j}^2})I[0, +\infty), \label{eq:pdf}
+\end{equation}
+其中 $C(r_j) = \int_0^{ + \infty }\exp(-\frac{(x_j - r_j)^2}{2{\sigma_j}^2})dx_j$是归一化系数，$I[0, +\infty)$是指示函数，在$[0, +\infty)$范围内取值$1$其余为$0$。
+
+因此，最终的损失函数和优化问题可以表示为：
+\begin{equation}
+\widehat {\bm{\theta }} = \mathop {\arg \min }\limits_{\bm{\theta }} \frac{1}{2}\sum\limits_{j = 1}^{N^-} {\frac{1}{\sigma_j^2}(\left\|{\bm\theta} - \bm{\mathrm{o}}_j\right\|_2 - r_j)^2}, \label{eq:loss}
+\end{equation}
+其中$N^-$代表剩余的接收端数量。因为$C(r_j)$和$\bm\theta$无关，因此在优化时可以忽略。
+
+当假设所有接收端的噪声方差$\sigma_j^2$相同时，该优化问题就变成找到一个点，使得它到所有圆边缘的距离之和最小。因此这个优化问题有着清楚的几何意义，于是我们把\eqref{eq:loss}称为基于几何的模型（Geometry-Based Model, GBM）。
+
+因为无法证明GBM的凸性，我们将采用和ML中相同的方法求解，即多次随机挑选初始点后选取使得损失函数最小的结果。
+
+后续的仿真结果表明GBM估计器是有偏的。但是注意到，我们的目标是最小化均方根误差（Mean Square Error, MSE）而MSE可以写作：
+\begin{equation}    \label{eq:mse}
+\begin{split}
+MSE &= \mathrm{E}[(\widehat{\theta} - \theta)^2]\\
+&= (\mathrm{E}[\widehat{\theta}] - \theta)^2 + \mathrm{E}[(\widehat{\theta} - \mathrm{E}[\widehat{\theta}])^2]\\
+&= bias^2 + variance.
+\end{split}
+\end{equation}
+即MSE是由估计器的偏差的平方和方差两部分组成，这也是机器学习领域经常出现的经典问题。若一个估计器有很小的偏差却有很大的方差则被称为“过拟合”（Over-Fitting）。在仿真和实测数据验证部分，我们会展示传统最大似然估计器相比于GBM是过拟合的。
+
+\section{克拉美罗下界（Cram\'{e}r-Rao Lower Bound, CRLB）}
+
+
+
 
 
 
