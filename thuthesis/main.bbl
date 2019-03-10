@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \providecommand{\href}[2]{\url{#2}}
@@ -282,5 +282,10 @@ Erceg V, Greenstein L~J, Tjandra S~Y, et~al.
   suburban environments\allowbreak[J].
 \newblock IEEE Journal on selected areas in communications, 1999, 17\penalty0
   (7): 1205-1211.
+
+\bibitem[Kay(1993)]{kay1993fundamentals}
+Kay S~M.
+\newblock Fundamentals of statistical signal processing\allowbreak[M].
+\newblock [S.l.]: Prentice Hall PTR, 1993
 
 \end{thebibliography}

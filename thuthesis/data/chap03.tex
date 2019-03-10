@@ -88,6 +88,46 @@ MSE &= \mathrm{E}[(\widehat{\theta} - \theta)^2]\\
 
 \section{克拉美罗下界（Cram\'{e}r-Rao Lower Bound, CRLB）}
 
+CRLB是估计器的理论误差下界，虽然不一定能够达到，但是对其进行分析有助于研究估计器的性能。
+
+\subsection{无偏估计的CRLB}
+
+对于路径损耗模型，因为第$i$个接收端的RSS的分布服从$p_i \sim \mathcal{N}(-10\alpha\mathrm{log}_{10}{d_i} -C, {\sigma_i}^2)$，因此费舍信息（Fisher Information）可表示为：
+\begin{equation}
+I(\bm{\theta}) = (\frac{10\alpha}{\sigma\mathrm{ln}10})^2\sum\limits_{i = 1}^N(\frac{{\bm\theta} - \bm{\mathrm{x}}_i}{{\left\|{\bm\theta} - \bm{\mathrm{x}}_i\right\|_2}^2})(\frac{{\bm\theta} - \bm{\mathrm{x}}_i}{{\left\|{\bm\theta} - \bm{\mathrm{x}}_i\right\|_2}^2})^T, \label{eq:fisher}
+\end{equation}
+其中$\sigma$是噪声的标准差。如果估计器是无偏的，则协方差矩阵的CRLB为：
+\begin{equation}
+\begin{split}
+CRLB(\bm{\theta}) &= I(\bm{\theta})^{-1} \label{eq:unbias_cov}\\
+&\le Cov(\widehat{\bm{\theta}}_{ML}).
+\end{split}
+\end{equation}
+
+因为最大似然估计器是渐进无偏的~ \cite{kay1993fundamentals}，根据\eqref{eq:mse}，最大似然法的RSME的估计下界可以表示为：
+\begin{equation}
+RMSE \ge \sqrt{Tr(CRLB)},\label{eq:rmse_ml}
+\end{equation}
+其中$Tr(\cdot)$是矩阵的迹，即对角线元素累加。
+
+\subsection{有偏估计的CRLB}
+
+假设GBM估计器的期望是$\bm\phi(\bm{\theta})$，如果估计器有偏，则协方差矩阵的CRLB可由下式所得：
+\begin{equation}
+\begin{split}
+CRLB_{GBM}(\bm{\theta}) &= {\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}}I(\bm{\theta})^{-1}{\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}}^T\\
+& \le Cov(\widehat{\bm{\theta}}_{GBM}),
+\end{split}
+\end{equation}
+其中$\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}$是雅可比（Jacobian）矩阵。注意到如果估计器是无偏的，则$\bm\phi(\bm{\theta}) = \bm{\theta}$即$\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta} = \bm{I}$，而这与\eqref{eq:unbias_cov}一致。
+
+根据\eqref{eq:mse}，GBM的RMSE的下界可表示为：
+\begin{equation}
+RMSE\! \ge\! \sqrt{{(\bm\phi(\bm{\theta})\! -\! \bm{\theta})}^T(\bm\phi(\bm{\theta})\! -\! \bm{\theta})\! +\! \mathrm{Tr}(CRLB_{GBM}(\bm{\theta}))}.\label{eq:rmse_gbm}
+\end{equation}
+
+
+
 
 
 
