@@ -13,7 +13,7 @@
 \end{equation}
 其中$P_i$是接收者的RSS，$\bm{\theta}$是发射源即用户的位置，$\alpha$是路径损耗指数，$C$是一个与$\bm{\theta}$ 和 $\bm{\mathrm{x}}_i$无关的常数，$n_i$则是均值为$0$、方差为${\sigma_i}^2$的高斯白噪声。为了简化表达，我们用下式代表发射源与接收端之间的距离：
 \begin{equation}
-d_i = {\left\| {{\bm{\theta}} - {{\bm{\mathrm{x}}_i}}} \right\|_2}, \forall i. \label{d}
+d_i = {\left\| {{\bm{\theta}} - {{\bm{\mathrm{x}}_i}}} \right\|_2}, \forall i. \label{eq:d}
 \end{equation}
 因为$C$是常数，所以它可以通过与另一个接收者的RSS相减被消除，即：
 \begin{equation}
@@ -126,7 +126,39 @@ CRLB_{GBM}(\bm{\theta}) &= {\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\the
 RMSE\! \ge\! \sqrt{{(\bm\phi(\bm{\theta})\! -\! \bm{\theta})}^T(\bm\phi(\bm{\theta})\! -\! \bm{\theta})\! +\! \mathrm{Tr}(CRLB_{GBM}(\bm{\theta}))}.\label{eq:rmse_gbm}
 \end{equation}
 
+直接计算$\bm\phi(\bm{\theta})$ 和 ${\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}}$较困难，但是我们知道接收者RSS的分布，因此蒙特卡洛法适用于该问题。
 
+首先，$\bm\phi(\bm{\theta})$比较容易用下式得到：
+\begin{equation}
+\begin{split}
+\bm\phi(\bm{\theta}) &= \mathrm{E}[\widehat{\bm{\theta}}]\\
+&\approx \frac{\sum\limits_{k = 1}^K{\widehat{\bm{\theta}}}}{K},
+\end{split}
+\end{equation}
+其中，$K$是仿真次数。${\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}}$可以直接用有限差分法得到，但是这可能需要大量时间计算，因为我们需要在二维平面内多次用不同的$\bm\theta$进行仿真。
+
+接下来，我们将推导一种不需要用不同的$\bm\theta$仿真就可以得到${\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}}$的方法。首先 $\bm\phi(\bm{\theta})$可以用如下公式表示：
+\begin{equation}
+\begin{split}
+&Let \quad f(\bm{\theta}) = {\prod\limits_{i=1}^N}(2\pi{\sigma_i}^2)^{-\frac{1}{2}}e^{-\frac{(p_i + 10\alpha\mathrm{log}_{10}{d_i} + C)^2}{2{\sigma_i}^2}},\\
+&then \quad \bm\phi(\bm{\theta}) = \iiint_{\mathbb{R}^N}\widehat{\bm{\theta}}f(\bm{\theta})dp_1...dp_N,
+\end{split}
+\end{equation}
+其中$d_i$由\eqref{eq:d}定义。若$\widehat{\bm{\theta}}f(\bm{\theta})$ 和 $\frac{\partial \widehat{\bm{\theta}}f(\bm\theta)}{\partial \bm{\theta}}$是连续的，$\iiint_{\mathbb{R}^N}\widehat{\bm{\theta}}f(\bm\theta)$ 和 $\iiint_{\mathbb{R}^N}\frac{\partial \widehat{\bm{\theta}}f(\bm\theta)}{\partial \bm{\theta}}$一致收敛，则
+\begin{equation}
+\begin{split}
+{\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}} &= \frac{\partial\mathrm{E}[\widehat{\bm{\theta}}]}{\partial \bm{\theta}}\\
+&= \frac{\partial}{\partial \bm{\theta}}\iiint_{\mathbb{R}^N} \widehat{\bm{\theta}}f(\bm{\theta}) dp_1...dp_N\\
+&= \iiint_{\mathbb{R}^N} \frac{\partial \widehat{\bm{\theta}}f(\bm{\theta})}{\partial \bm{\theta}} dp_1...dp_N\\
+&= \iiint_{\mathbb{R}^N} \sum\limits_{i=1}^N \widehat{\bm{\theta}}(\frac{-10\alpha}{{\sigma_i}^2\mathrm{ln}10}\frac{{\bm\theta} - \bm{\mathrm{x}}_i}{{\left\|{\bm\theta} - \bm{\mathrm{x}}_i\right\|_2}^2})^Tf(\bm{\theta}) dp_1...dp_N\\
+&= \mathrm{E}[\sum\limits_{i=1}^N\widehat{\bm{\theta}}(\frac{-10\alpha}{{\sigma_i}^2\mathrm{ln}10}\frac{{\bm\theta} - \bm{\mathrm{x}}_i}{{\left\|{\bm\theta} - \bm{\mathrm{x}}_i\right\|_2}^2})^T]. \label{eq:mc}
+\end{split}
+\end{equation}
+需要注意$\widehat{\bm{\theta}}$与$\bm{\theta}$无关，而是关于$(\bm{\mathrm{x}}_1,...,\bm{\mathrm{x}}_N)^T$ 和 $(P_1,...,P_N)^T$的函数。
+
+根据\eqref{eq:mc}的结果，我们可以通过计算$\sum\limits_{i=1}^N\widehat{\bm{\theta}}(\frac{-10\alpha}{{\sigma_i}^2\mathrm{ln}10}\frac{{\bm\theta} - \bm{\mathrm{x}}_i}{{\left\|{\bm\theta} - \bm{\mathrm{x}}_i\right\|_2}^2})^T$的经验平均值来利用蒙特卡洛法近似估算 ${\frac{\partial\bm\phi(\bm{\theta})}{\partial \bm\theta}}$，而不需要有限差分，这会大量节省仿真时间。
+
+\section{RMSE的置信区间}
 
 
 
