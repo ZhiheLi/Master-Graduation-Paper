@@ -160,6 +160,22 @@ RMSE\! \ge\! \sqrt{{(\bm\phi(\bm{\theta})\! -\! \bm{\theta})}^T(\bm\phi(\bm{\the
 
 \section{RMSE的置信区间}
 
+估计器的精度会受到噪声的影响，因此为了判断不同的估计器是否统计显著地不同，我们需要计算RMSE的置信区间（Confidence Interval）。
+
+虽然RMSE的分布未知，但是幸运地，依据中心极限定理（Central Limit Theorem），当仿真次数很多且$({\widehat{\bm{\theta}}_k - \bm{\theta}})^T({\widehat{\bm{\theta}}_k - \bm{\theta}})$对于不同的$k$来说独立同分布，则MSE的分布将会趋近于正态分布，即
+\begin{equation}
+\begin{split}
+\mathop{\mathrm{lim}}\limits_{K\rightarrow\infty}MSE &= \mathop{\mathrm{lim}}\limits_{K\rightarrow\infty} \frac{\sum\limits_{k=1}^K({\widehat{\bm{\theta}}_k - \bm{\theta}})^T({\widehat{\bm{\theta}}_k - \bm{\theta}})}{K} \\
+&\sim \mathcal{N}(\mu, \frac{\sigma^2}{K}),
+\end{split}
+\end{equation}
+其中$\mu$ 和 ${\sigma}^2$ 是 $({\widehat{\bm{\theta}}_k - \bm{\theta}})^T({\widehat{\bm{\theta}}_k - \bm{\theta}})$的期望和方差。因为我们不知道方差和期望，所以应当使用经验均值代替期望，即我们应当使用T检验。但是，在仿真次数足够多的情况下（在我们的场景下仿真了100,000次），我们可以直接使用Z检验。因此$95\%$置信区间可由下式获得：
+\begin{equation}
+CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sigma}{\sqrt{K}}}). \label{eq:ci}
+\end{equation}
+因此我们可以用\eqref{eq:ci}得到RMSE的置信区间并检验两个估计器的RMSE是否统计显著的不同。
+
+\section{数值仿真实验}
 
 
 
