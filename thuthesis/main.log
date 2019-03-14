@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  11 MAR 2019 15:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  14 MAR 2019 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1727,12 +1727,17 @@ ut line 36.
 
 
 
-] [13] [14] [15] [16]) [17]
+] [13] [14] [15] [16]
+File: figures/SimScene.pdf Graphic file (type pdf)
+<use figures/SimScene.pdf>
+File: figures/GBM_simulation.pdf Graphic file (type pdf)
+<use figures/GBM_simulation.pdf>
+ [17] [18]) [19]
 \openout2 = `data/chap04.aux'.
 
  (./data/chap04.tex
 第4章
-) [18
+) [20
 
 
 
@@ -1741,7 +1746,7 @@ ut line 36.
 
  (./data/chap05.tex
 第5章
-) [19
+) [21
 
 
 
@@ -1750,7 +1755,7 @@ ut line 36.
 
  (./data/chap06.tex
 第6章
-) [20
+) [22
 
 
 
@@ -1758,7 +1763,7 @@ ut line 36.
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [21
+ [23
 
 
 
@@ -1767,10 +1772,10 @@ ut line 36.
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [22
+ [24
 
 
-] (./main.loe [23
+] (./main.loe [25
 
 
 ])
@@ -1778,10 +1783,10 @@ ut line 36.
 \openout7 = `main.loe'.
 
  (./main.bbl
-[24] [25
+[26] [27
 
 
-] [26]) [27]
+] [28]) [29]
 \openout2 = `data/ack.aux'.
 
  (./data/ack.tex
@@ -1793,14 +1798,14 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 11.
 
 
-Package natbib Warning: Citation `thuthesis' on page 28 undefined on input line
+Package natbib Warning: Citation `thuthesis' on page 30 undefined on input line
  11.
 
-[28
+[30
 
 
 
-]) [29
+]) [31
 
 
 ] (./data/appendix01.tex
@@ -1816,36 +1821,36 @@ line 36.
 \c@endmpdefopctr=\count399
 Package hyperref Info: bookmark level for unknown mpdefop defaults to 0 on inpu
 t line 48.
-[30
+[32
 
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 11.04124pt on input line 108.
- [31]
+ [33]
 File: figures/thu-lib-logo.pdf Graphic file (type pdf)
 <use figures/thu-lib-logo.pdf>
- [32]
+ [34]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
 (Font)              scaled to size 12.045pt on input line 169.
- [33]
+ [35]
 附录 B
-[34
+[36
 
 ]
 File: figures/thu-whole-logo.pdf Graphic file (type pdf)
 <use figures/thu-whole-logo.pdf>
- [35]
+ [37]
 附录 C
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 262.
 (d:/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [36
+)) [38
 
 ]
 \openout2 = `data/resume.aux'.
 
- (./data/resume.tex) [37
+ (./data/resume.tex) [39
 
 
 
@@ -1864,7 +1869,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
- [38
+ [40
 
 ]
 File: figures/scan-record.pdf Graphic file (type pdf)
@@ -1873,7 +1878,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
- [39]
+ [41]
 \tf@thm=\write8
 \openout8 = `main.thm'.
 
@@ -1895,16 +1900,16 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: FE82932591F6E40DE231078989E9EA92
-(rerunfilecheck)             After:  BFC64ACA05EFAA68227D698F428E6A13.
+(rerunfilecheck)             Before: 0339CEE4169E40906AA645A47EC84EE7
+(rerunfilecheck)             After:  D44D29F9CA44675CA7226D044929AE9C.
  ) 
 Here is how much of TeX's memory you used:
- 33470 strings out of 492933
- 657027 string characters out of 6136537
- 744508 words of memory out of 5000000
- 36935 multiletter control sequences out of 15000+600000
+ 33481 strings out of 492933
+ 657293 string characters out of 6136537
+ 745113 words of memory out of 5000000
+ 36944 multiletter control sequences out of 15000+600000
  678722 words of font info for 236 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  66i,23n,96p,2531b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (52 pages).
+Output written on main.pdf (54 pages).

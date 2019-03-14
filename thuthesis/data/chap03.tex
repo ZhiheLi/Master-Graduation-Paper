@@ -31,7 +31,7 @@ d_i = {\left\| {{\bm{\theta}} - {{\bm{\mathrm{x}}_i}}} \right\|_2}, \forall i. \
 
 \subsection{基于几何的模型}
 
-S. Wang 和 R. Inkol~\cite{wang2011near} 提出了一种线性最小二乘估计器，在推导过程中发现每两个接收端RSS可以形成一个发射源坐落在其上的圆。但是这个结论没有被作者直接用来优化，而是提出了一种线性最小二乘法。接下来我们将用这个知识得到基于几何的模型（Geometry-Based Model, GBM）。
+S. Wang 和 R. Inkol~\cite{wang2011near} 提出了一种线性最小二乘估计器（Linear Least Square, LLS），在推导过程中发现每两个接收端RSS可以形成一个发射源坐落在其上的圆。但是这个结论没有被作者直接用来优化，而是提出了一种线性最小二乘法。接下来我们将用这个知识得到基于几何的模型（Geometry-Based Model, GBM）。
 
 如果我们忽略\eqref{eq:diff_rss}中的噪声项，可以得到：
 \begin{equation}
@@ -177,7 +177,35 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 \section{数值仿真实验}
 
+\subsection{仿真场景与估计器设置}
 
+为了比较基于几何的模型（GBM），最大似然法（ML）以及线性最小二乘（LLS）估计器，我们进行了仿真实验。仿真场景设置与S. Wang 和 R. Inkol~\cite{wang2011near} 的场景相同：发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。上述坐标的单位是米，分布如图\ref{fig:simscene}所示。在生成接收信号数据时，路径损耗系数$\alpha=4$，噪声服从0均值高斯分布，方差从1变化到15，常数$C=-40$。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{SimScene.pdf}
+	\caption{发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。}
+	\label{fig:simscene}
+\end{figure}
+
+因为GBM和ML都是非凸优化，因此我们将会以随机初始点进行20次迭代计算，使损失函数取得最小值的点作为最终定位点。初始点的二维坐标是从两个独立同分布的均匀分布$\mathcal{U}(-500, 500)$中采样所得。注意到我们的场景中没有锚点，因此必须选择一个接收端作为被减数，这里我们选择RSS最大的点。对于GBM，如果有多个最大值，则随机选择一个，其余的删除。GBM算法中的$\sigma_j$均被设为1。针对每个噪声方差，GBM、ML和LLS三种算法都仿真100,000次，之后计算RMSE及其置信区间。此外，无偏估计的CRLB以及GBM的CRLB分别根据\eqref{eq:rmse_ml}和\eqref{eq:rmse_gbm}计算。
+
+\subsection{仿真结果}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{GBM_simulation.pdf}
+	\caption{100,000次仿真下，RMSE、置信区间和CRLB的结果。正方形是我们的算法GBM，上三角是ML，圆圈是LLS。点线为RMSE的95\%置信区间。实线是无偏估计的CRLB，虚线是通过蒙特卡洛法估计的GBM的CRLB。}
+	\label{fig:gbm_sim}
+\end{figure}
+
+如图\ref{fig:gbm_sim}所示为100,000次仿真下，RMSE及其95\%置信区间和CRLB的结果。从仿真结果中可以看到，当噪声标准差$\sigma<5$dBM时ML的RMSE略低于GBM。然而当标准差$\sigma>5$dBM时，GBM的RMSE明显小于ML而且统计显著。因为多径效应和阴影效应的影响，真实世界场景中往往噪声功率较大。下一小节中，我们将上述三种算法用于实测数据，结果将为我们提供一些深入的见解。除此之外，CRLB的结果和GBM与ML的情况相似。虽然GBM的CRLB比它的RMSE小得多，但是我们不知道是否存在一种估计器可以取得这个下界。这或许是下一步研究的可能突破点。
+
+注意到，当噪声的标准差大于9之后，GBM的RMSE会比无偏估计的CRLB还低，这也暗示了GBM是有偏估计否则CRLB是RMSE的下界。根据\eqref{eq:mse}，即虽然GBM是有偏估计，但是相比于方差的减小，偏置的稍微增加也不会使得总体MSE更大。从机器学习的角度来看，ML是一个低偏置、高方差的估计器，也就是说ML对于路径损耗模型“过拟合”了。而GBM类似于一种正则化版本，能够更好地适应高噪声数据。
+
+最后，LLs估计器的RMSE最大。相比于LLS，ML能取得更小的RMSE已经被验证过~\cite{jackson2011received}，而且当噪声较大时，LLS的性能会严重恶化~\cite{vaghefi2013cooperative}。我们的仿真结果与这些前人的结论一致。
+
+\subsection{实测数据验证}
 
 
 
