@@ -183,7 +183,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{SimScene.pdf}
+	\includegraphics[width=\textwidth]{SimScene.pdf}
 	\caption{发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。}
 	\label{fig:simscene}
 \end{figure}
@@ -206,6 +206,54 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 最后，LLs估计器的RMSE最大。相比于LLS，ML能取得更小的RMSE已经被验证过~\cite{jackson2011received}，而且当噪声较大时，LLS的性能会严重恶化~\cite{vaghefi2013cooperative}。我们的仿真结果与这些前人的结论一致。
 
 \subsection{实测数据验证}
+
+为了验证仿真结果并检测算法的在实际问题上的可用性，我们也采集了一些实测数据，根据接收信号强度对发射源定位。虽然我们算法设计的初衷是对用户定位，但是其实只要是信号发射源即可。因此为了数据采集的便利，我们的数据采集的是商用蜂窝网内基站的发射信号，车载路测仪作为接收端在小区内的道路上采集数据。
+
+\subsubsection{数据介绍}
+
+数据由车载路测仪在城市街道内运行采集移动通信基站的接收信号强度，其中共有超过120,000个基站。路测仪每$5s$采集一次GPS定位坐标、RSS、LAC (Location Area Code)、CID (Cell ID) 以及其他的基站信息。为了尽量最小化遮挡对信号衰减造成的影响，我们选择GSM（Global System for Mobile）信号用作测试。GSM的信号频段是900MHz和1.8GHz。
+
+在定位之前，数据需要经过预处理。首先，将GPS的经纬度坐标转换为笛卡尔直角坐标系。其次，为了减少计算时间并降低阴影效应的影响，RSS$<-60$dBM的点将被删除。最后，满足如下要求的基站（发射源，目标定位点）将被选中进行实验：
+\begin{itemize}
+	\item 信号制式是GSM；
+	\item 在基站的可接收范围内有至少10个接收点；
+	\item 距离基站最近的接收点距离基站的距离小于1000m。
+\end{itemize}
+
+经过筛选后，共有17321个可用基站，这些数据将被用于实验。经过统计，这些基站的平均辐射半径为751m，即最小RSS对应的接收位置与基站之间的距离的平均值。后续的三个估计器的路径损耗系数$\alpha$均被设为4。
+
+\subsubsection{实测数据实验结果}
+
+\begin{table}[tbp]
+	\caption{Measured Data Results}
+	\begin{center}
+		\begin{tabular}{l|c|c|c}
+			\hline
+			\textbf{Estimator} & \textbf{GBM} & \textbf{ML} & \textbf{LLS} \\
+			\hline
+			\textbf{RMSE} [m] & 367.52 & 453.33 & 4898.10 \\
+			\hline
+			\textbf{MAE}$^{a}$ [m] & 282.43 & 380.08 & 936.19 \\
+			\hline
+			\multicolumn{3}{l}{$^{\mathrm{a}}$Mean Absolute Error.}
+		\end{tabular}
+		\label{tab:transmitter}
+	\end{center}
+\end{table}
+
+如表\ref{tab:transmitter}所示，相比于ML和LLS，GBM可以在RMSE和MAE（Mean Absolute Error，平均绝对值误差）上均取得更小的误差。其中MAE由下式计算：
+\begin{equation}
+MAE = \frac{\sum\limits_{k=1}^K{\left\| \widehat{\bm{\theta}} - \bm{\theta} \right\|}_2}{K}.
+\end{equation}
+
+根据仿真结果，即当噪声较大时GBM的定位误差明显小于ML，我们可以发现实测数据受噪声影响较大，因此GBM能取得小得多的定位误差。GBM的定位误差比ML的误差低将近100m，相对的，RMSE上降低了23.35\%，MAE上降低了34.75\%。从实验结果中我们可以发现，相比于ML，GBM更适用于在实际的商用无线网络中对发射源定位，因为真实环境噪声很大。此外，LLS的定位误差确认了前人工作中的论述，即LLS估计器的定位效果在噪声较大时会严重恶化。
+
+\subsection{本章小结}
+
+本章中，我们提出了一种基于接收信号强度的，利用几何模型对发射源定位的算法。除此之外，一种节省计算时间的、利用蒙特卡洛法估计GBM的RMSE的克拉美罗下界的方法也被提出，同时给出基于中心极限定理计算RMSE的置信区间的方法。仿真实验显示，相比于ML，在噪声方差较大时GBM算法可以取得高得多的定位精度，即意味着GBM更加稳健。无偏估计的CRLB和GBM的CRLB呈现出和上述现象相似的结果。为了验证仿真结果并测试算法实用性，我们还从商用蜂窝网内采集数据进行测试。实验结果显示，GBM在RMSE和MAE上均取得更小的定位误差，这个结果或许说明GBM更适用于真实场景下的发射源定位需求。
+
+
+
 
 
 

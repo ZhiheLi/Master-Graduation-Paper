@@ -2,4 +2,4 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces 如图所示为整个服务机制的系统架构图。智能终端会先向定位服务器发送定位请求，定位服务器根据用户是信号发射源或接收端采取不同的算法计算用户位置，之后返回给终端。获得位置后向广告服务器发送广告请求，服务器计算完成后返回要投放给用户的广告。\relax }}{9}{figure.caption.12}% 
 \contentsline {figure}{\numberline {2.2}{\ignorespaces 如图所示为针对一次访问投放广告的工作流程，其中箭头上的序号代表了执行顺序。流程从客户端发起广告请求开始，之后中心服务器依次请求召回广告，预测用户对被召回广告的打分和决定投放广告。我们的算法部署在投放策略服务器上。中心服务器、召回服务器、分数预测服务器和投放策略服务器共同构成了广告服务器（群）。\relax }}{10}{figure.caption.13}% 
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。\relax }}{18}{figure.caption.14}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 100,000次仿真下，RMSE、置信区间和CRLB的结果。正方形是我们的算法GBM，上三角是ML，圆圈是LLS。点线为RMSE的95\%置信区间。实线是无偏估计的CRLB，虚线是通过蒙特卡洛法估计的GBM的CRLB。\relax }}{18}{figure.caption.15}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 100,000次仿真下，RMSE、置信区间和CRLB的结果。正方形是我们的算法GBM，上三角是ML，圆圈是LLS。点线为RMSE的95\%置信区间。实线是无偏估计的CRLB，虚线是通过蒙特卡洛法估计的GBM的CRLB。\relax }}{19}{figure.caption.15}% 
