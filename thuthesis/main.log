@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  15 MAR 2019 10:54
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  20 MAR 2019 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1663,14 +1663,13 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./data/denotation.tex [5] [6
+ (./data/denotation.tex [5]) [6
 
 
-]) [7]
+]
 \openout2 = `data/chap01.aux'.
 
-
-(./data/chap01.tex
+ (./data/chap01.tex
 第1章
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
 (Font)              scaled to size 12.64714pt on input line 4.
@@ -1744,16 +1743,72 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 
  (./data/chap04.tex
 第4章
-) [22
+[22
 
 
 
-]
+] [23]
+File: figures/manifold.pdf Graphic file (type pdf)
+<use figures/manifold.pdf>
+ [24] [25]
+File: figures/sgnVSnew.pdf Graphic file (type pdf)
+<use figures/sgnVSnew.pdf>
+
+
+LaTeX Warning: Reference `eq:hessian' on page 26 undefined on input line 115.
+
+[26] [27]
+File: figures/data_collection_area.png Graphic file (type bmp)
+<figures/data_collection_area.png>
+LaTeX Font Info:    Calculating math sizes for size <13.04874> on input line 14
+9.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 13.04874pt on input line 149.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.52551pt on input line 149.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.17683pt on input line 149.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 13.04874pt on input line 149.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 9.52551pt on input line 149.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 7.17683pt on input line 149.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 149.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\lambda' on input line 149.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 149.
+
+File: figures/RMSE_lam.pdf Graphic file (type pdf)
+<use figures/RMSE_lam.pdf>
+[28] [29]
+File: figures/RMSE_k.pdf Graphic file (type pdf)
+<use figures/RMSE_k.pdf>
+ [30]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 193.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 193.
+
+File: figures/RMSE_N.pdf Graphic file (type pdf)
+<use figures/RMSE_N.pdf>
+[31] [32] [33]) [34]
 \openout2 = `data/chap05.aux'.
 
  (./data/chap05.tex
 第5章
-) [23
+) [35
 
 
 
@@ -1762,27 +1817,27 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 
  (./data/chap06.tex
 第6章
-) [24
+) [36
 
 
 
-] (./main.lof)
+] (./main.lof [37
+
+
+
+
+])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [25
-
-
-
-
-] (./main.lot)
+ [38] (./main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [26
+ [39
 
 
-] (./main.loe [27
+] (./main.loe [40
 
 
 ])
@@ -1790,10 +1845,10 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 \openout7 = `main.loe'.
 
  (./main.bbl
-[28] [29
+[41] [42
 
 
-] [30]) [31]
+] [43]) [44]
 \openout2 = `data/ack.aux'.
 
  (./data/ack.tex
@@ -1805,59 +1860,25 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 11.
 
 
-Package natbib Warning: Citation `thuthesis' on page 32 undefined on input line
+Package natbib Warning: Citation `thuthesis' on page 45 undefined on input line
  11.
 
-[32
+[45
 
 
 
-]) [33
+]) [46
 
 
 ] (./data/appendix01.tex
 附录 A
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.045pt on input line 7.
-\c@currmpdefctr=\count395
-\c@endmpdefctr=\count396
-\c@mpdef=\count397
-Package hyperref Info: bookmark level for unknown mpdef defaults to 0 on input 
-line 36.
-\c@currmpdefopctr=\count398
-\c@endmpdefopctr=\count399
-Package hyperref Info: bookmark level for unknown mpdefop defaults to 0 on inpu
-t line 48.
-[34
+) [47
 
-
-]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 11.04124pt on input line 108.
- [35]
-File: figures/thu-lib-logo.pdf Graphic file (type pdf)
-<use figures/thu-lib-logo.pdf>
- [36]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
-(Font)              scaled to size 12.045pt on input line 169.
- [37]
-附录 B
-[38
-
-]
-File: figures/thu-whole-logo.pdf Graphic file (type pdf)
-<use figures/thu-whole-logo.pdf>
- [39]
-附录 C
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 262.
-(d:/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [40
 
 ]
 \openout2 = `data/resume.aux'.
 
- (./data/resume.tex) [41
+ (./data/resume.tex) [48
 
 
 
@@ -1876,7 +1897,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
- [42
+ [49
 
 ]
 File: figures/scan-record.pdf Graphic file (type pdf)
@@ -1885,7 +1906,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
- [43]
+ [50]
 \tf@thm=\write8
 \openout8 = `main.thm'.
 
@@ -1901,15 +1922,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 09D5B89DE334E859BE57B00674C020C2.
+(rerunfilecheck)             Checksum: 4D4B47527336EA93FDFDD70DEB950A27.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 33484 strings out of 492933
- 657355 string characters out of 6136537
- 745456 words of memory out of 5000000
- 36947 multiletter control sequences out of 15000+600000
- 681522 words of font info for 237 fonts, out of 8000000 for 9000
+ 33383 strings out of 492933
+ 651610 string characters out of 6136537
+ 747125 words of memory out of 5000000
+ 36847 multiletter control sequences out of 15000+600000
+ 694253 words of font info for 280 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  66i,23n,96p,2531b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (56 pages).
+Output written on main.pdf (62 pages).

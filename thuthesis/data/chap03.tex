@@ -225,16 +225,16 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 \subsubsection{实测数据实验结果}
 
 \begin{table}[tbp]
-	\caption{Measured Data Results}
+	\caption{实测数据实验结果}
 	\begin{center}
-		\begin{tabular}{l|c|c|c}
-			\hline
-			\textbf{Estimator} & \textbf{GBM} & \textbf{ML} & \textbf{LLS} \\
-			\hline
+		\begin{tabular}{cccc}
+			\toprule
+			\textbf{估计器} & \textbf{GBM} & \textbf{ML} & \textbf{LLS} \\
+			\midrule
 			\textbf{RMSE} [m] & 367.52 & 453.33 & 4898.10 \\
-			\hline
+			\midrule
 			\textbf{MAE}$^{a}$ [m] & 282.43 & 380.08 & 936.19 \\
-			\hline
+			\bottomrule
 			\multicolumn{3}{l}{$^{\mathrm{a}}$Mean Absolute Error.}
 		\end{tabular}
 		\label{tab:transmitter}
