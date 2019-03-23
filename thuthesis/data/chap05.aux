@@ -1,13 +1,70 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
+\citation{garey2002computers}
 \FN@pp@footnotehinttrue 
 \@writefile{toc}{\contentsline {chapter}{\numberline {第5章}保量推荐下的最优广告投放算法}{35}{chapter.5}\protected@file@percent }
 \newlabel{cha:allocation}{{5}{35}{保量推荐下的最优广告投放算法}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}PIKA算法原理}{35}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}问题定义}{35}{subsection.5.1.1}\protected@file@percent }
+\@writefile{loe}{\contentsline {equation}{\numberline {5-1}}{36}{equation.5.1.1}\protected@file@percent }
+\@writefile{loe}{\contentsline {equation}{\numberline {5-2}}{36}{equation.5.1.2}\protected@file@percent }
+\newlabel{eq:ori_opt}{{5-2}{36}{问题定义}{equation.5.1.2}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-3}}{36}{equation.5.1.3}\protected@file@percent }
+\newlabel{eq:avg}{{5-3}{36}{问题定义}{equation.5.1.3}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-4}}{37}{equation.5.1.4}\protected@file@percent }
+\newlabel{eq:opt}{{5-4}{37}{问题定义}{equation.5.1.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}训练模块}{37}{subsection.5.1.2}\protected@file@percent }
+\newlabel{subsec:train}{{5.1.2}{37}{训练模块}{subsection.5.1.2}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-5}}{37}{equation.5.1.5}\protected@file@percent }
+\newlabel{eq:kkt}{{5-5}{37}{训练模块}{equation.5.1.5}{}}
+\citation{bharadwaj2012shale}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-6}}{38}{equation.5.1.6}\protected@file@percent }
+\newlabel{eq:xeq}{{5-6}{38}{训练模块}{equation.5.1.6}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-7}}{38}{equation.5.1.7}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces 离线最优解算法\relax }}{39}{algorithm.1}\protected@file@percent }
+\newlabel{alg:offline}{{1}{39}{离线最优解算法\relax }{algorithm.1}{}}
+\newlabel{solve_beta}{{7}{39}{离线最优解算法\relax }{ALC@unique.7}{}}
+\newlabel{solve_alpha}{{11}{39}{离线最优解算法\relax }{ALC@unique.11}{}}
+\newlabel{bound}{{13}{39}{离线最优解算法\relax }{ALC@unique.13}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-8}}{39}{equation.5.1.8}\protected@file@percent }
+\citation{devanur2009adwords,feldman2010online}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces 线上投放概率算法\relax }}{40}{algorithm.2}\protected@file@percent }
+\newlabel{alg:online}{{2}{40}{线上投放概率算法\relax }{algorithm.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}投放模块}{40}{subsection.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}工程实现细节}{41}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}曝光量保底策略}{41}{subsection.5.2.1}\protected@file@percent }
+\newlabel{subsec:guarantee}{{5.2.1}{41}{曝光量保底策略}{subsection.5.2.1}{}}
+\newlabel{select}{{3}{41}{曝光量保底策略}{Item.10}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-9}}{41}{equation.5.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}投放多于一个广告}{42}{subsection.5.2.2}\protected@file@percent }
+\newlabel{subsec:more_than_one}{{5.2.2}{42}{投放多于一个广告}{subsection.5.2.2}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-10}}{42}{equation.5.2.10}\protected@file@percent }
+\newlabel{eq:no_replace}{{5-10}{42}{投放多于一个广告}{equation.5.2.10}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-11}}{42}{equation.5.2.11}\protected@file@percent }
+\@writefile{loe}{\contentsline {equation}{\numberline {5-12}}{42}{equation.5.2.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}小时需求量}{43}{subsection.5.2.3}\protected@file@percent }
+\newlabel{subsec:hourly_d}{{5.2.3}{43}{小时需求量}{subsection.5.2.3}{}}
+\@writefile{loe}{\contentsline {equation}{\numberline {5-13}}{43}{equation.5.2.13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces 仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }}{44}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:delivery}{{5.1}{44}{仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces 仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }}{44}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:delivery}{{5.2}{44}{仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}实验与结果}{44}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}仿真实验}{44}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}线上实验设置}{44}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}关键指标}{44}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}线上实验结果}{44}{subsection.5.3.4}\protected@file@percent }
 \FN@pp@footnotehinttrue 
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces 仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }}{45}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:delivery}{{5.3}{45}{仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces 仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }}{45}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:delivery}{{5.4}{45}{仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces 仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }}{45}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:delivery}{{5.5}{45}{仿真实验中测试数据集的缺投情况统计。训练数据和测试数据各有50万次PV，同时有400个广告均有50的需求量。这个缺投量的分布和高斯分布非常相似。\relax }{figure.caption.30}{}}
 \@setckpt{data/chap05}{
-\setcounter{page}{36}
-\setcounter{equation}{0}
-\setcounter{enumi}{3}
+\setcounter{page}{46}
+\setcounter{equation}{13}
+\setcounter{enumi}{2}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
@@ -15,30 +72,30 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{5}
-\setcounter{section}{0}
-\setcounter{subsection}{0}
+\setcounter{section}{3}
+\setcounter{subsection}{4}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
+\setcounter{figure}{5}
 \setcounter{table}{0}
 \setcounter{parentequation}{0}
-\setcounter{caption@flags}{2}
+\setcounter{caption@flags}{0}
 \setcounter{ContinuedFloat}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
 \setcounter{AM@survey}{0}
 \setcounter{pp@next@reset}{1}
 \setcounter{@fnserial}{0}
-\setcounter{endNonectr}{52}
+\setcounter{endNonectr}{73}
 \setcounter{currNonectr}{0}
 \setcounter{LT@tables}{0}
 \setcounter{LT@chunks}{0}
 \setcounter{NAT@ctr}{0}
-\setcounter{Item}{7}
+\setcounter{Item}{12}
 \setcounter{Hfootnote}{0}
 \setcounter{Hy@AnnotLevel}{0}
-\setcounter{bookmark@seq@number}{46}
+\setcounter{bookmark@seq@number}{59}
 \setcounter{thu@bookmark}{4}
 \setcounter{translationbibi}{0}
 \setcounter{publicationsi}{0}
@@ -82,6 +139,11 @@
 \setcounter{currconjecturectr}{0}
 \setcounter{endconjecturectr}{0}
 \setcounter{conjecture}{0}
-\setcounter{float@type}{4}
-\setcounter{section@level}{1}
+\setcounter{float@type}{8}
+\setcounter{algorithm}{2}
+\setcounter{ALC@unique}{29}
+\setcounter{ALC@line}{11}
+\setcounter{ALC@rem}{0}
+\setcounter{ALC@depth}{0}
+\setcounter{section@level}{2}
 }

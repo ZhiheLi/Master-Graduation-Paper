@@ -1,2 +1,51 @@
-\chapter{外文资料原文}
-\label{cha:engorg}
+\chapter{依期望采样的证明}
+\label{cha:proof}
+
+这里，我们将证明在允许一个广告被投放于同一PV两次的情况下，采样的期望等于计算所得的期望。
+
+因为我们已经约束了$0 \le \bm{X}_{ij} \le 1$，因此划分操作可以很容易保证$\bm{p}$中的元素最多只被切分两次。于是现在只剩两种可能：
+\begin{enumerate}[1)]
+	\item $\bm{p}_j$没被切分。
+	
+	这种情况是平凡的，因为显然广告$j$被采样的期望就是$\bm{p}_j$。
+	
+	\item $\bm{p}_j$被切分。
+	
+	假设$\bm{p}_j$被分成两份：$p_1$和$p_2$。表\ref{tab:prob}展现了广告$j$被采样次数的概率，最后一行的期望是$p_1+p_2$，而这正好就是$\bm{p}_j$。
+	\begin{table}[htb]
+		\centering
+		\caption{广告$j$被采样次数的概率（无限制）}
+		\label{tab:prob}
+		\begin{tabular}{cccc}
+			\toprule
+			被采样次数&0&1&2\\
+			\midrule
+			概率 & $ (1-p_1) (1-p_2)$ & $p_1 (1-p_2) +  (1-p_1)p_2$ & $p_1p_2$ \\
+			\midrule
+			期望 & \multicolumn{3}{c}{$p_1 (1-p_2) +  (1-p_1)p_2 + 2p_1p_2 = p_1 + p_2$} \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+\end{enumerate}
+
+总之，如果一个广告可以被投放于同一个PV多于一次，则广告被采样，或者说被投放，的期望就是$\bm{p}$。
+
+但是，如果广告$j$已经根据$p_1$被采样了，那么$p_2$就会被忽略的话，概率和期望就会变成表\ref{tab:prob_less}。此时被采样的期望不再等于$\bm{p}_j$，而是比$\bm{p}_j$少了$p_1p_2$。不过由于只有最多$m-1$个$\bm{p}_j$会被切分，这启发了我们最好切分那些$\bm{p}_j$较小的广告，从而减少采样的期望和计算所得期望的差距。
+
+\begin{table}[htb]
+	\centering
+	\caption{广告$j$被采样次数的概率（最多被采样一次）}
+	\label{tab:prob_less}
+	\begin{tabular}{ccc}
+		\toprule
+		被采样次数&0&1\\
+		\midrule
+		概率 & $ (1-p_1) (1-p_2)$ & $p_1 +  (1-p_1)p_2$ \\
+		\midrule
+		期望 & \multicolumn{2}{c}{$p_1 + p_2 - p_1p_2$} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+

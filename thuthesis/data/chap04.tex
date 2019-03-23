@@ -46,20 +46,20 @@ Cosine(\mathbf{s}, \mathbf{r}) = \frac{\mathbf{s}^T\mathbf{r}}{\left\|\mathbf{s}
 
 \section{指纹定位中的切线距离}
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{manifold.pdf}
 	\caption{如图展示了欧氏距离、流形间距离和切线距离的关系。在信号空间，$\mathbf{s}$是测试点，$\widehat{\mathbf{s}}$是一个训练点。 $\boldsymbol{M_s}$ 和 $\boldsymbol{M_{st}}$分别是$\mathbf{s}$和$\widehat{\mathbf{s}}$所在的流形。$\boldsymbol{\widehat{M}_{st}}$是$\boldsymbol{M_{st}}$在$\widehat{\mathbf{s}}$处的切线。$d_E$代表$\mathbf{s}$和$\widehat{\mathbf{s}}$之间的欧氏距离。$d_M$代表$\boldsymbol{M_s}$ 和 $\boldsymbol{M_{st}}$两个流形之间的距离。$d_T$代表$\mathbf{s}$到$\boldsymbol{M_{st}}$的切线距离。显然，相比于$d_E$，$d_T$是对$d_M$更好的估计。}
 	\label{fig:manifold}
 \end{figure}
 
-切线距离是一种对测试点到训练点所在流形距离的局部线性近似，从测试点到训练点流形的切线的距离被称作切线距离，如图\ref{fig:manifold}中$d_T$所示。计算切线距离只需要知道$(\widehat{\mathbf{x}}, \widehat{\mathbf{s}})$处的梯度而不是整个流形，因此切线距离的计算所需数据远小于计算流形之间的距离。
+\textit{切线距离（Tangent Distance）}是一种对测试点到训练点所在流形距离的局部线性近似，从测试点到训练点流形的切线的距离被称作切线距离，如图\ref{fig:manifold}中$d_T$所示。计算切线距离只需要知道$(\widehat{\mathbf{x}}, \widehat{\mathbf{s}})$处的梯度而不是整个流形，因此切线距离的计算所需数据远小于计算流形之间的距离。
 
 理论上，切线的方向与流形的梯度相同。但是由于不知道流形的具体函数从而很难计算梯度，我们将用有限差分获得切线方向。注意到，在我们的场景中，信号空间内的流形由物理空间的微小变化形成，也就是距离的微小变化。比如，如果$(\mathbf{x}, \mathbf{s})$是一个物理-信号空间对，在物理空间中点$\mathbf{x} + a{\bm{\delta}}$在信号空间内的流形 $\boldsymbol{M_s}$上所对应的点应当表示为 $\boldsymbol{M_s}(a)$。$\delta$是一个表征微小变化方向的单位向量，$a$是一个代表由于物理空间变化导致的距离上变化的标量。这种对距离求导数而不是对物理空间坐标求导数的做法看起来并不直接，因为后者的做法更直观且符合常理。原因是物理坐标$\mathbf{x}$是一个二维或者三维向量，意味着求导需要求偏导数。首先，计算偏导数需要更多的计算及时间。更严重的是，用有限差分法估计偏导数需要$\mathbf{x}$中依次只有一个元素微小变化，其他维度的元素不变，而这对于数据采集是一个严峻挑战，尤其是对于大规模室外数据采集。实际上，如果数据采集条件允许，偏导数或者导数对于后续的分析来说没有区别，除了优化变量从标量变成向量了。总之，偏导数依然适用于切线距离。
 
 \subsection{欧式切线距离}
 
-切线距离起初被提出时就是基于欧氏距离~\cite{simard1998transformation}，由下式定义：
+切线距离最初被提出时就是基于欧氏距离~\cite{simard1998transformation}，由下式定义：
 \begin{equation}
 d_T = \mathop {\min }\limits_{a} {{\left\| \mathbf{s} - \mathbf{t}a - \widehat{\mathbf{s}} \right\|}_2}, \label{eq:euctd}
 \end{equation}
@@ -79,7 +79,7 @@ a_j = {\left( {\mathbf{t}_j}^T\mathbf{t}_j \right)}^{-1}{\mathbf{t}_j}^T\left( {
 \end{equation}
 在所有$a_j$都被计算之后，对于根据\eqref{eq:euctd}得到的所有切线距离$d_{Tj}$求均值，而这将被当做指纹定位中KNN的距离度量方式。
 
-我们将上述距离称为欧式切线距离（Euclidean Tangent Distance, ETD）。虽然ETD很容易求解，但是数值实验显示曼哈顿距离的定位精度优于前文所提到的所有常见距离度量方式，甚至比ETD效果还好。因为ETD的定位精度高于欧氏距离，也许我们可以推演说基于曼哈顿距离的切线距离会比曼哈顿距离表现更好。因此，下一节我们将提出曼哈顿切线距离。
+我们将上述距离称为\textit{欧式切线距离（Euclidean Tangent Distance, ETD）}。虽然ETD很容易求解，但是数值实验显示曼哈顿距离的定位精度优于前文所提到的所有常见距离度量方式，甚至比ETD效果还好。因为ETD的定位精度高于欧氏距离，也许我们可以推演说基于曼哈顿距离的切线距离会比曼哈顿距离表现更好。因此，下一节我们将提出曼哈顿切线距离。
 
 \subsection{曼哈顿切线距离}
 
@@ -95,24 +95,26 @@ d_{MT} = \mathop {\min }\limits_{a} {\left\| \mathbf{s} - \mathbf{t}a - \widehat
 
 令$\mathbf{h} = \mathbf{s} - \mathbf{t}a - \widehat{\mathbf{s}}$，则
 \begin{equation}
-\frac{\partial \mathcal{L}}{\partial a} = -\mathbf{t}^T \mathrm{tanh}\left( \beta \mathbf{h} \right), \label{eq:deri}
+\frac{\partial \mathcal{L}}{\partial a} = -\mathbf{t}^T \mathrm{tanh}\left( \beta \mathbf{h} \right), 
+\label{eq:deri}
 \end{equation}
 
 \begin{equation}
-\frac{{\partial}^2 \mathcal{L}}{\partial a^2} = \beta \left( \mathbf{t} \odot \mathbf{t} \right )^T \left[ \mathbf{1} - \mathrm{tanh}\left( \beta \mathbf{h} \right) \odot \mathrm{tanh}\left( \beta \mathbf{h} \right) \right], \label{hessian}
+\frac{{\partial}^2 \mathcal{L}}{\partial a^2} = \beta \left( \mathbf{t} \odot \mathbf{t} \right )^T \left[ \mathbf{1} - \mathrm{tanh}\left( \beta \mathbf{h} \right) \odot \mathrm{tanh}\left( \beta \mathbf{h} \right) \right], 
+\label{eq:hessian}
 \end{equation}
 其中$\odot$是哈达玛积（Hadamard Product），即两个大小相同的矩阵中对应元素相乘，$\mathbf{1}$是全1向量。因为$\mathcal{L}$对$a$求导的导数已经从\eqref{eq:sgn}变为\eqref{eq:deri}了，意味着原函数也从${\left\| \mathbf{h} \right\|}_1$变成$\frac{1}{\beta}\mathbf{1}^T\mathrm{ln}\left[ \mathrm{cosh} \left( \beta \mathbf{h} \right) \right] + C$了，其中$C$是一个常数，这里为了逼近${\left\| \mathbf{h} \right\|}_1$，我们取$C=\mathrm{ln}2$。这两个原函数的对比如图\ref{fig:sgnVSnew}所示，当$|x|>0.0002$时，二者已经几乎完全重合。因此，如果我们用双曲正切函数代替符号函数优化所得的$a$也应当与最优解很接近。在替换后，问题依然是一个凸优化问题（可以很容易证明 $\frac{{\partial}^2 \mathcal{L}}{\partial a^2} > 0$）。虽然如此，曼哈顿距离仍然会被当做目标函数，因为两个原函数差距甚小而且曼哈顿距离容易计算。
 
 如果$\mathbf{t}$是偏导数，$a$将变为一个与物理空间维度相同的向量，相应的一阶导数变成梯度，二阶导数变为海森矩阵。不过这样该问题依然是凸优化问题，因此不影响求解。
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{sgnVSnew.pdf}
 	\caption{如图对比了${\left\| x \right\|}_1$和$\frac{1}{\beta}\mathbf{1}^T\mathrm{ln}\left[ \mathrm{cosh} \left( \beta x \right) \right] + \mathrm{ln}2$两种函数的差异，其中$\beta=10,000$。蓝色实线代表曼哈顿距离所基于的绝对值函数，红色虚线代表双曲正切函数的原函数。从图中可以看到，当$|x|>0.0002$时，二者已经几乎完全重合。}
 	\label{fig:sgnVSnew}
 \end{figure}
 
-既然一阶导数和二阶导数已经由\eqref{eq:deri}和\eqref{eq:hessian}给出，$\mathcal{L}$可由牛顿法（Newton's Method）求解从而得到曼哈顿切线距离。我们把这个距离度量方式称为曼哈顿切线距离（Manhattan Tangent Distance, MTD）。它的物理意义是对测试点和训练点所在的流形之间的曼哈顿距离的局部线性近似，也就是在切线上找到一点使得它到测试点的距离最小。
+既然一阶导数和二阶导数已经由\eqref{eq:deri}和\eqref{eq:hessian}给出，$\mathcal{L}$可由牛顿法（Newton's Method）求解从而得到曼哈顿切线距离。我们把这个距离度量方式称为\textit{曼哈顿切线距离（Manhattan Tangent Distance, MTD）}。它的物理意义是对测试点和训练点所在的流形之间的曼哈顿距离的局部线性近似，也就是在切线上找到一点使得它到测试点的距离最小。
 
 \subsection{低计算复杂度的近似解法}
 
@@ -122,7 +124,7 @@ d_{MT} = \mathop {\min }\limits_{a} {\left\| \mathbf{s} - \mathbf{t}a - \widehat
 \begin{equation}
 \frac{\partial \mathcal{L}}{\partial a} = -\beta \mathbf{t}^T \left( \mathbf{s} - \mathbf{t}a - \widehat{\mathbf{s}} \right). \label{eq:approx}
 \end{equation}
-令\eqref{eq:approx}等于0的解和\eqref{eq:euca}一样。换句话说，近似算法中$a$的求解将采用和欧式切线距离相同的方法，但是将$a$带回目标函数计算切线距离时是基于曼哈顿距离的。我们把该算法叫做近似曼哈顿切线距离（Approximate Manhattan Tangent Distance, AMTD）。
+令\eqref{eq:approx}等于0的解和\eqref{eq:euca}一样。换句话说，近似算法中$a$的求解将采用和欧式切线距离相同的方法，但是将$a$带回目标函数计算切线距离时是基于曼哈顿距离的。我们把该算法叫做\textit{近似曼哈顿切线距离（Approximate Manhattan Tangent Distance, AMTD）}。
 
 AMTD的时间复杂度是简单曼哈顿距离的$\mathcal{O}(N)$倍，相比于MTD，复杂度降低了$S$倍。
 
@@ -130,7 +132,7 @@ AMTD的时间复杂度是简单曼哈顿距离的$\mathcal{O}(N)$倍，相比于
 
 \subsection{数据采集与预处理}
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{data_collection_area.png}
 	\caption{如图所示为我们采集数据的三个区域的卫星图。左上子图为荷塘区域，右上子图为教学区，下子图为紫荆公寓区。}
@@ -148,7 +150,7 @@ AMTD的时间复杂度是简单曼哈顿距离的$\mathcal{O}(N)$倍，相比于
 
 \subsection{指数变换参数$\lambda$的选择} \label{subsec:lambda}
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 \includegraphics[width=\textwidth]{RMSE_lam.pdf}
 \caption{如图所示为指数变换中参数$\lambda$与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿距离，红色方形线是余弦相似度，绿色圆形线是欧氏距离。当$\lambda>7$后RMSE几乎没有明显变化。}
@@ -181,7 +183,7 @@ AMTD的时间复杂度是简单曼哈顿距离的$\mathcal{O}(N)$倍，相比于
 
 \subsection{KNN中近邻数k的选择}
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{RMSE_k.pdf}
 	\caption{如图所示为KNN中参数$k$与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿距离，绿色圆形线是余弦相似度，红色方形线是欧氏距离。当$k$取2或3时可以取得最小定位误差。}
@@ -192,7 +194,7 @@ AMTD的时间复杂度是简单曼哈顿距离的$\mathcal{O}(N)$倍，相比于
 
 \subsection{切线距离的导数中参数$N$的选择}
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{RMSE_N.pdf}
 	\caption{如图所示为求解切线距离时求导数所需近邻数$N$与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿切线距离MTD，红色方形线是近似曼哈顿切线距离AMTD。由于实验次数少导致曲线波动较大，不过大致可以看出当$N>2$时几乎没有太大的变化。}
@@ -234,6 +236,8 @@ AMTD的时间复杂度是简单曼哈顿距离的$\mathcal{O}(N)$倍，相比于
 			\toprule
 			RMSE相对减少 &  荷塘 & 教学区 & 公寓区 \\
 			\midrule
+			ETD & -13.1\% & -15.4\% & -7.29\% \\
+			\midrule
 			MTD & -6.53\% & -8.23\% & -6.29\% \\
 			\midrule
 			AMTD & -5.58\% & -5.32\% & -4.03\% \\
@@ -243,13 +247,13 @@ AMTD的时间复杂度是简单曼哈顿距离的$\mathcal{O}(N)$倍，相比于
 	\end{center}
 \end{table}
 
-综合上述实验的结论，我们令指数变换参数$\lambda=10$，KNN中的参数$k=3$。涉及切线距离时，计算导数所需的近邻数$N$设为5。本小节中我们将比较欧式距离、欧式切线距离、曼哈顿距离、曼哈顿切线距离和近似曼哈顿切线距离的定位效果。
+综合上述实验的结论，我们令指数变换参数$\lambda=10$，KNN中的参数$k=3$。涉及切线距离时，计算导数所需的近邻数$N$设为5。这些参数将被用于加权-KNN中，分别以欧式距离、欧式切线距离、曼哈顿距离、曼哈顿切线距离和近似曼哈顿切线距离作为距离度量方式，比较和分析定位效果。
 
-实验结果展示在表\ref{tab:td}中。首先，注意到欧式切线距离ETD可以取得比欧氏距离更小的RMSE，但是仍然高于简单的曼哈顿距离，这也是我们提出曼哈顿切线距离MTD的动机。其次，实验结果显示MTD在所有三个数据集中均取得最小的RMSE。除此之外，虽然近似曼哈顿切线距离AMTD的RMSE略高于MTD，但是仍然低于曼哈顿距离的RMSE而且在我们的实验中效果仅次于MTD，而且计算复杂度远小于MTD。相比于曼哈顿距离，在三个数据集中，MTD和AMTD相比于曼哈顿距离的相对RMSE减少如表\ref{tab:td_relative}所示。显然，无论对于MTD还是AMTD来说，从公寓区采集的数据定位精度提升的最小。我们分析可能的原因是公寓区采集的数据其时序相邻点的平均距离最小，因此相比于其他数据集，像曼哈顿距离等简单距离度量方式能够更好的估计流形之间的距离。但是定位精度受到很多其他因素影响，比如信道信息等。相比于其他区域，公寓区的建筑较高而且密集，这可能导致距离的小幅变化反映到信号空间会变化较大，这也会限制MTD和AMTD的提升效果。
+实验结果展示在表\ref{tab:td}中。首先，注意到欧式切线距离ETD可以取得比欧氏距离更小的RMSE，但是仍然高于简单的曼哈顿距离，这也是我们提出曼哈顿切线距离MTD的动机。其次，实验结果显示MTD在所有三个数据集中均取得最小的RMSE。除此之外，虽然近似曼哈顿切线距离AMTD的RMSE略高于MTD，但是仍然低于曼哈顿距离的RMSE而且在我们的实验中效果仅次于MTD，而且计算复杂度远小于MTD。相比于曼哈顿距离，在三个数据集中，ETD相比于欧氏距离、MTD和AMTD相比于曼哈顿距离的相对RMSE减少如表\ref{tab:td_relative}所示。显然，无论对于ETD、MTD还是AMTD来说，都是从公寓区采集的数据定位精度的相对提升幅度最小。我们分析可能的原因是公寓区采集的数据其时序相邻点的平均距离最小，因此相比于其他数据集，像欧氏距离和曼哈顿距离等简单距离度量方式能够更好的估计流形之间的距离。但是定位精度会受到很多其他因素影响，比如阴影效应和多径效应等。相比于其他区域，公寓区的建筑较高而且密集，存在较多的遮挡以及散射路径，这可能导致距离的小幅变化反映到信号空间会变化较大，这也会限制切线距离的提升效果。
 
 \section{本章小结}
 
-这一章我们讨论了将切线距离应用于基于接收信号强度和加权-KNN的指纹定位算法中。首先，我们简单介绍了指纹定位的KNN算法中常见的距离度量方式，并分析了他们的缺点，包括给予不同大小的RSS相同的权重以及在流形存在的情况下简单度量方式不能反映真实距离等问题。针对这些问题，我们分别利用指数变换和切线距离来解决。其后，我们阐明了切线距离背后所蕴含的思想，并介绍了原作者所提出的基于欧氏距离的切线距离ETD。然而，因为在实测数据实验中欧式切线距离的定位效果虽然相较于欧氏距离有提升，但是依然劣于曼哈顿距离，于是我们提出了曼哈顿切线距离MTD以及在定位精度和计算复杂度之间折中的近似曼哈顿切线距离AMTD。为了验证算法性能，我们在清华大学校园内不同的三个区域采集数据，开展实验找到适合的KNN近邻数$k$、指数变换参数$\lambda$以及切线距离中计算导数所需的近邻数$N$。最后，我们比较了欧氏距离、ETD、曼哈顿距离、MTD和AMTD的定位误差RMSE。在所有三个数据集中，MTD均取得了最小的定位误差，而AMTD则以远小于MTD的计算量取得了仅次于MTD却依然优于曼哈顿距离的定位精度。
+这一章我们讨论了将切线距离应用于基于接收信号强度和加权-KNN的指纹定位算法中。首先，我们简单介绍了指纹定位的KNN算法中常见的距离度量方式，并分析了他们的缺点，包括给予不同大小的接收信号强度相同的权重以及在流形存在的情况下简单度量方式不能反映真实距离等问题。针对这些问题，我们分别利用指数变换和切线距离来解决。其后，我们阐明了切线距离背后所蕴含的思想，并介绍了原作者所提出的基于欧氏距离的切线距离ETD。然而，因为在实测数据实验中欧式切线距离的定位效果虽然相较于欧氏距离有提升，但是依然劣于曼哈顿距离，于是我们提出了曼哈顿切线距离MTD以及在定位精度和计算复杂度之间折中的近似曼哈顿切线距离AMTD。为了验证算法性能，我们在清华大学校园内不同的三个区域采集数据，开展实验找到适合的KNN近邻数$k$、指数变换参数$\lambda$以及切线距离中计算导数所需的近邻数$N$。最后，我们比较了欧氏距离、ETD、曼哈顿距离、MTD和AMTD的定位误差RMSE。在所有三个数据集中，MTD均取得了最小的定位误差，而AMTD则以远小于MTD的计算量取得了仅次于MTD却依然优于曼哈顿距离的定位精度。
 
 
 

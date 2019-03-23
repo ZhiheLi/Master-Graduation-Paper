@@ -32,7 +32,7 @@
 \@writefile{loe}{\contentsline {equation}{\numberline {4-10}}{26}{equation.4.2.10}\protected@file@percent }
 \newlabel{eq:deri}{{4-10}{26}{曼哈顿切线距离}{equation.4.2.10}{}}
 \@writefile{loe}{\contentsline {equation}{\numberline {4-11}}{26}{equation.4.2.11}\protected@file@percent }
-\newlabel{hessian}{{4-11}{26}{曼哈顿切线距离}{equation.4.2.11}{}}
+\newlabel{eq:hessian}{{4-11}{26}{曼哈顿切线距离}{equation.4.2.11}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 如图对比了${\left \delimiter "026B30D  x \right \delimiter "026B30D }_1$和$\frac  {1}{\beta }\mathbf  {1}^T\mathrm  {ln}\left [ \mathrm  {cosh} \left ( \beta x \right ) \right ] + \mathrm  {ln}2$两种函数的差异，其中$\beta =10,000$。蓝色实线代表曼哈顿距离所基于的绝对值函数，红色虚线代表双曲正切函数的原函数。从图中可以看到，当$|x|>0.0002$时，二者已经几乎完全重合。\relax }}{27}{figure.caption.18}\protected@file@percent }
 \newlabel{fig:sgnVSnew}{{4.2}{27}{如图对比了${\left \| x \right \|}_1$和$\frac {1}{\beta }\mathbf {1}^T\mathrm {ln}\left [ \mathrm {cosh} \left ( \beta x \right ) \right ] + \mathrm {ln}2$两种函数的差异，其中$\beta =10,000$。蓝色实线代表曼哈顿距离所基于的绝对值函数，红色虚线代表双曲正切函数的原函数。从图中可以看到，当$|x|>0.0002$时，二者已经几乎完全重合。\relax }{figure.caption.18}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}低计算复杂度的近似解法}{27}{subsection.4.2.3}\protected@file@percent }
@@ -43,19 +43,19 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}数据采集与预处理}{28}{subsection.4.3.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 如图所示为我们采集数据的三个区域的卫星图。左上子图为荷塘区域，右上子图为教学区，下子图为紫荆公寓区。\relax }}{29}{figure.caption.19}\protected@file@percent }
 \newlabel{fig:data_collection}{{4.3}{29}{如图所示为我们采集数据的三个区域的卫星图。左上子图为荷塘区域，右上子图为教学区，下子图为紫荆公寓区。\relax }{figure.caption.19}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 指数变换后RMSE比较\relax }}{29}{table.caption.21}\protected@file@percent }
-\newlabel{tab:no_exp}{{4.1}{29}{指数变换后RMSE比较\relax }{table.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}指数变换参数$\lambda $的选择}{29}{subsection.4.3.2}\protected@file@percent }
+\newlabel{subsec:lambda}{{4.3.2}{29}{指数变换参数$\lambda $的选择}{subsection.4.3.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 如图所示为指数变换中参数$\lambda $与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿距离，红色方形线是余弦相似度，绿色圆形线是欧氏距离。当$\lambda >7$后RMSE几乎没有明显变化。\relax }}{30}{figure.caption.20}\protected@file@percent }
 \newlabel{fig:rmse_lam}{{4.4}{30}{如图所示为指数变换中参数$\lambda $与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿距离，红色方形线是余弦相似度，绿色圆形线是欧氏距离。当$\lambda >7$后RMSE几乎没有明显变化。\relax }{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}指数变换参数$\lambda $的选择}{30}{subsection.4.3.2}\protected@file@percent }
-\newlabel{subsec:lambda}{{4.3.2}{30}{指数变换参数$\lambda $的选择}{subsection.4.3.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 指数变换后RMSE比较\relax }}{30}{table.caption.21}\protected@file@percent }
+\newlabel{tab:no_exp}{{4.1}{30}{指数变换后RMSE比较\relax }{table.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}KNN中近邻数k的选择}{30}{subsection.4.3.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 如图所示为KNN中参数$k$与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿距离，绿色圆形线是余弦相似度，红色方形线是欧氏距离。当$k$取2或3时可以取得最小定位误差。\relax }}{31}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:rmse_k}{{4.5}{31}{如图所示为KNN中参数$k$与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿距离，绿色圆形线是余弦相似度，红色方形线是欧氏距离。当$k$取2或3时可以取得最小定位误差。\relax }{figure.caption.22}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}KNN中近邻数k的选择}{31}{subsection.4.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}切线距离的导数中参数$N$的选择}{31}{subsection.4.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}切线距离定位效果}{31}{subsection.4.3.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 如图所示为求解切线距离时求导数所需近邻数$N$与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿切线距离MTD，红色方形线是近似曼哈顿切线距离AMTD。由于实验次数少导致曲线波动较大，不过大致可以看出当$N>2$时几乎没有太大的变化。\relax }}{32}{figure.caption.23}\protected@file@percent }
 \newlabel{fig:rmse_n}{{4.6}{32}{如图所示为求解切线距离时求导数所需近邻数$N$与定位均方根误差RMSE的关系曲线，蓝色星形线是曼哈顿切线距离MTD，红色方形线是近似曼哈顿切线距离AMTD。由于实验次数少导致曲线波动较大，不过大致可以看出当$N>2$时几乎没有太大的变化。\relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}切线距离定位效果}{32}{subsection.4.3.5}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces 切线距离定位效果对比\relax }}{33}{table.caption.24}\protected@file@percent }
 \newlabel{tab:td}{{4.2}{33}{切线距离定位效果对比\relax }{table.caption.24}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces 切线距离定位效果对比\relax }}{33}{table.caption.25}\protected@file@percent }
@@ -88,7 +88,7 @@
 \setcounter{AM@survey}{0}
 \setcounter{pp@next@reset}{1}
 \setcounter{@fnserial}{0}
-\setcounter{endNonectr}{52}
+\setcounter{endNonectr}{53}
 \setcounter{currNonectr}{0}
 \setcounter{LT@tables}{0}
 \setcounter{LT@chunks}{0}
@@ -140,6 +140,11 @@
 \setcounter{currconjecturectr}{0}
 \setcounter{endconjecturectr}{0}
 \setcounter{conjecture}{0}
-\setcounter{float@type}{4}
+\setcounter{float@type}{8}
+\setcounter{algorithm}{0}
+\setcounter{ALC@unique}{0}
+\setcounter{ALC@line}{0}
+\setcounter{ALC@rem}{0}
+\setcounter{ALC@depth}{0}
 \setcounter{section@level}{1}
 }

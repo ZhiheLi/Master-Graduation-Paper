@@ -72,7 +72,7 @@ f(x_j) = \frac{1}{C(r_j)}\exp(-\frac{(x_j - r_j)^2}{2{\sigma_j}^2})I[0, +\infty)
 \end{equation}
 其中$N^-$代表剩余的接收端数量。因为$C(r_j)$和$\bm\theta$无关，因此在优化时可以忽略。
 
-当假设所有接收端的噪声方差$\sigma_j^2$相同时，该优化问题就变成找到一个点，使得它到所有圆边缘的距离之和最小。因此这个优化问题有着清楚的几何意义，于是我们把\eqref{eq:loss}称为基于几何的模型（Geometry-Based Model, GBM）。
+当假设所有接收端的噪声方差$\sigma_j^2$相同时，该优化问题就变成找到一个点，使得它到所有圆边缘的距离之和最小。因此这个优化问题有着清楚的几何意义，于是我们把\eqref{eq:loss}称为\textit{基于几何的模型（Geometry-Based Model, GBM）}。
 
 因为无法证明GBM的凸性，我们将采用和ML中相同的方法求解，即多次随机挑选初始点后选取使得损失函数最小的结果。
 
@@ -181,7 +181,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 为了比较基于几何的模型（GBM），最大似然法（ML）以及线性最小二乘（LLS）估计器，我们进行了仿真实验。仿真场景设置与S. Wang 和 R. Inkol~\cite{wang2011near} 的场景相同：发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。上述坐标的单位是米，分布如图\ref{fig:simscene}所示。在生成接收信号数据时，路径损耗系数$\alpha=4$，噪声服从0均值高斯分布，方差从1变化到15，常数$C=-40$。
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{SimScene.pdf}
 	\caption{发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。}
@@ -192,7 +192,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 \subsection{仿真结果}
 
-\begin{figure}
+\begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{GBM_simulation.pdf}
 	\caption{100,000次仿真下，RMSE、置信区间和CRLB的结果。正方形是我们的算法GBM，上三角是ML，圆圈是LLS。点线为RMSE的95\%置信区间。实线是无偏估计的CRLB，虚线是通过蒙特卡洛法估计的GBM的CRLB。}

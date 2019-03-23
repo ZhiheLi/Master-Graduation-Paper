@@ -13,45 +13,45 @@ A level-1 auxiliary file: data/resume.aux
 Database file #1: ref/refs.bib
 Warning--I didn't find a database entry for "thuthesis"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 40 entries,
+You've used 41 entries,
             3363 wiz_defined-function locations,
-            1008 strings with 14581 characters,
-and the built_in function-call counts, 308510 in all, are:
-= -- 32268
-> -- 31936
-< -- 31788
-+ -- 10310
-- -- 330
-* -- 1469
-:= -- 33560
-add.period$ -- 117
-call.type$ -- 40
-change.case$ -- 80
-chr.to.int$ -- 9364
-cite$ -- 40
-duplicate$ -- 844
-empty$ -- 2549
-format.name$ -- 594
-if$ -- 89115
+            1013 strings with 14685 characters,
+and the built_in function-call counts, 313478 in all, are:
+= -- 32779
+> -- 32439
+< -- 32292
++ -- 10477
+- -- 338
+* -- 1496
+:= -- 34105
+add.period$ -- 119
+call.type$ -- 41
+change.case$ -- 82
+chr.to.int$ -- 9516
+cite$ -- 41
+duplicate$ -- 869
+empty$ -- 2603
+format.name$ -- 604
+if$ -- 90547
 int.to.chr$ -- 1
-int.to.str$ -- 41
+int.to.str$ -- 42
 missing$ -- 0
-newline$ -- 209
-num.names$ -- 120
-pop$ -- 13974
+newline$ -- 214
+num.names$ -- 123
+pop$ -- 14189
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 41
 quote$ -- 0
-skip$ -- 36940
+skip$ -- 37532
 stack$ -- 0
-substring$ -- 10579
-swap$ -- 127
-text.length$ -- 393
+substring$ -- 10741
+swap$ -- 130
+text.length$ -- 403
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 523
+type$ -- 531
 warning$ -- 0
-while$ -- 539
+while$ -- 550
 width$ -- 0
-write$ -- 619
+write$ -- 632
 (There was 1 warning)
