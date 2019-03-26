@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  23 MAR 2019 17:05
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  26 MAR 2019 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1331,20 +1331,7 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \algorithmicindent=\skip100
 ) (./main.aux
 (./data/chap01.aux) (./data/chap02.aux) (./data/chap03.aux) (./data/chap04.aux)
-(./data/chap05.aux
-
-LaTeX Warning: Label `fig:delivery' multiply defined.
-
-
-LaTeX Warning: Label `fig:delivery' multiply defined.
-
-
-LaTeX Warning: Label `fig:delivery' multiply defined.
-
-
-LaTeX Warning: Label `fig:delivery' multiply defined.
-
-) (./data/chap06.aux) (./data/ack.aux) (./data/resume.aux))
+(./data/chap05.aux) (./data/chap06.aux) (./data/ack.aux) (./data/resume.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 24.
@@ -1853,24 +1840,28 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
  [41] [42] [43]
 File: figures/simulation.pdf Graphic file (type pdf)
 <use figures/simulation.pdf>
+ [44] [45]
 File: figures/FTR.pdf Graphic file (type pdf)
 <use figures/FTR.pdf>
+ [46]
 File: figures/CTR.pdf Graphic file (type pdf)
 <use figures/CTR.pdf>
+ [47]
 File: figures/LTR.pdf Graphic file (type pdf)
 <use figures/LTR.pdf>
 File: figures/HTR.pdf Graphic file (type pdf)
 <use figures/HTR.pdf>
-) [44] [45]
+ [48]) [49]
 \openout2 = `data/chap06.aux'.
 
- (./data/chap06.tex
+
+(./data/chap06.tex
 第6章
-) [46
+) [50
 
 
 
-] (./main.lof [47
+] (./main.lof [51
 
 
 
@@ -1879,14 +1870,14 @@ File: figures/HTR.pdf Graphic file (type pdf)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [48] (./main.lot)
+ [52] (./main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [49
+ [53
 
 
-] (./main.loe [50
+] (./main.loe [54
 
 
 ])
@@ -1894,10 +1885,10 @@ File: figures/HTR.pdf Graphic file (type pdf)
 \openout7 = `main.loe'.
 
  (./main.bbl
-[51] [52] [53
+[55] [56] [57
 
 
-] [54]) [55]
+] [58]) [59]
 \openout2 = `data/ack.aux'.
 
  (./data/ack.tex
@@ -1909,25 +1900,25 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 11.
 
 
-Package natbib Warning: Citation `thuthesis' on page 56 undefined on input line
+Package natbib Warning: Citation `thuthesis' on page 60 undefined on input line
  11.
 
-[56
+[60
 
 
 
-]) [57
+]) [61
 
 
 ] (./data/appendix01.tex
 附录 A
-) [58
+) [62
 
 
 ]
 \openout2 = `data/resume.aux'.
 
- (./data/resume.tex) [59
+ (./data/resume.tex) [63
 
 
 
@@ -1946,7 +1937,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
- [60
+ [64
 
 ]
 File: figures/scan-record.pdf Graphic file (type pdf)
@@ -1955,7 +1946,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
- [61]
+ [65]
 \tf@thm=\write8
 \openout8 = `main.thm'.
 
@@ -1970,20 +1961,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 (./data/resume.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A8C8A4294AD48EE22451F43D3D825919.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 942C5EF88E6E974E017A557680FEBE00
+(rerunfilecheck)             After:  D4B3B951F740E682C2DD4FAB0A8981AD.
  ) 
 Here is how much of TeX's memory you used:
- 33665 strings out of 492933
- 657935 string characters out of 6136537
- 753107 words of memory out of 5000000
- 37115 multiletter control sequences out of 15000+600000
+ 33683 strings out of 492933
+ 658885 string characters out of 6136537
+ 753967 words of memory out of 5000000
+ 37133 multiletter control sequences out of 15000+600000
  702665 words of font info for 284 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  66i,23n,96p,2531b,905s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (74 pages).
+Output written on main.pdf (78 pages).

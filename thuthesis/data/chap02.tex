@@ -34,7 +34,7 @@
 	\begin{equation}
 		score = CTR \times  (b + a \times FTR), \label{eq:score}
 	\end{equation}
-	其中 $a$ 和 $b$ 是线性组合系数；
+	其中 $a$ 和 $b$ 是线性组合系数。需要注意，这里的FTR是条件概率，即在用户点击广告的条件下，用户关注的概率；
 	\item 投放广告，这也是第\ref{cha:allocation}章主要描述的部分。中心服务器向投放策略服务器请求投放的广告的同时，也会把召回的广告及其分数一起发送。我们的算法和之前部署的流控算法唯一区别就在投放策略服务器上；
 	\item 获取广告内容后，中心服务器将广告返回客户端。
 \end{enumerate}
