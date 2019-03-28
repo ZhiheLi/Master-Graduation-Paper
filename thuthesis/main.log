@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  26 MAR 2019 15:41
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  28 MAR 2019 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1857,11 +1857,11 @@ File: figures/HTR.pdf Graphic file (type pdf)
 
 (./data/chap06.tex
 第6章
-) [50
+[50
 
 
 
-] (./main.lof [51
+] [51]) [52] (./main.lof [53
 
 
 
@@ -1870,25 +1870,25 @@ File: figures/HTR.pdf Graphic file (type pdf)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [52] (./main.lot)
+ [54] (./main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [53
+ [55
 
 
-] (./main.loe [54
+] (./main.loe [56
 
 
 ])
 \tf@loe=\write7
 \openout7 = `main.loe'.
 
- (./main.bbl
-[55] [56] [57
+
+(./main.bbl [57] [58] [59
 
 
-] [58]) [59]
+] [60]) [61]
 \openout2 = `data/ack.aux'.
 
  (./data/ack.tex
@@ -1900,25 +1900,25 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 11.
 
 
-Package natbib Warning: Citation `thuthesis' on page 60 undefined on input line
+Package natbib Warning: Citation `thuthesis' on page 62 undefined on input line
  11.
 
-[60
+[62
 
 
 
-]) [61
+]) [63
 
 
 ] (./data/appendix01.tex
 附录 A
-) [62
+) [64
 
 
 ]
 \openout2 = `data/resume.aux'.
 
- (./data/resume.tex) [63
+ (./data/resume.tex) [65
 
 
 
@@ -1937,7 +1937,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
- [64
+ [66
 
 ]
 File: figures/scan-record.pdf Graphic file (type pdf)
@@ -1946,7 +1946,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
- [65]
+ [67]
 \tf@thm=\write8
 \openout8 = `main.thm'.
 
@@ -1961,23 +1961,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 (./data/resume.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 942C5EF88E6E974E017A557680FEBE00
-(rerunfilecheck)             After:  D4B3B951F740E682C2DD4FAB0A8981AD.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D4B3B951F740E682C2DD4FAB0A8981AD.
  ) 
 Here is how much of TeX's memory you used:
- 33683 strings out of 492933
- 658885 string characters out of 6136537
- 753967 words of memory out of 5000000
- 37133 multiletter control sequences out of 15000+600000
+ 33702 strings out of 492933
+ 660131 string characters out of 6136537
+ 753983 words of memory out of 5000000
+ 37152 multiletter control sequences out of 15000+600000
  702665 words of font info for 284 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  66i,23n,96p,2531b,905s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (78 pages).
+Output written on main.pdf (80 pages).

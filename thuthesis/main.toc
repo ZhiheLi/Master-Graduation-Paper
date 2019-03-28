@@ -59,12 +59,12 @@
 \contentsline {section}{\numberline {5.4}本章小结}{48}{section.5.4}% 
 \contentsline {chapter}{\numberline {第6章}结论与展望}{50}{chapter.6}% 
 \contentsline {section}{\numberline {6.1}主要工作及贡献}{50}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}进一步工作展望}{50}{section.6.2}% 
-\contentsline {chapter}{插图索引}{51}{section*.31}% 
-\contentsline {chapter}{表格索引}{53}{section*.33}% 
-\contentsline {chapter}{公式索引}{54}{section*.35}% 
-\contentsline {chapter}{参考文献}{57}{section*.37}% 
-\contentsline {chapter}{致\hspace {1em}谢}{60}{section*.39}% 
-\contentsline {chapter}{声\hspace {1em}明}{61}{section*.41}% 
-\contentsline {chapter}{\numberline {附录 A}依期望采样的证明}{62}{appendix.A}% 
-\contentsline {chapter}{个人简历、在学期间发表的学术论文与研究成果}{63}{section*.45}% 
+\contentsline {section}{\numberline {6.2}进一步工作展望}{51}{section.6.2}% 
+\contentsline {chapter}{插图索引}{53}{section*.31}% 
+\contentsline {chapter}{表格索引}{55}{section*.33}% 
+\contentsline {chapter}{公式索引}{56}{section*.35}% 
+\contentsline {chapter}{参考文献}{59}{section*.37}% 
+\contentsline {chapter}{致\hspace {1em}谢}{62}{section*.39}% 
+\contentsline {chapter}{声\hspace {1em}明}{63}{section*.41}% 
+\contentsline {chapter}{\numberline {附录 A}依期望采样的证明}{64}{appendix.A}% 
+\contentsline {chapter}{个人简历、在学期间发表的学术论文与研究成果}{65}{section*.45}% 
