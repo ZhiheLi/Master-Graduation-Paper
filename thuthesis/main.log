@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  28 MAR 2019 16:07
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  30 MAR 2019 10:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1891,26 +1891,15 @@ File: figures/HTR.pdf Graphic file (type pdf)
 ] [60]) [61]
 \openout2 = `data/ack.aux'.
 
- (./data/ack.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.045pt on input line 11.
-LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <8> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 11.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 11.
-
-
-Package natbib Warning: Citation `thuthesis' on page 62 undefined on input line
- 11.
-
-[62
+ (./data/ack.tex [62
 
 
 
 ]) [63
 
 
-] (./data/appendix01.tex
+]
+(./data/appendix01.tex
 附录 A
 ) [64
 
@@ -1950,26 +1939,22 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 \tf@thm=\write8
 \openout8 = `main.thm'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
-(./main.aux (./data/chap01.aux) (./data/chap02.aux) (./data/chap03.aux)
-(./data/chap04.aux) (./data/chap05.aux) (./data/chap06.aux) (./data/ack.aux)
-(./data/resume.aux))
+ (./main.aux (./data/chap01.aux)
+(./data/chap02.aux) (./data/chap03.aux) (./data/chap04.aux) (./data/chap05.aux)
+(./data/chap06.aux) (./data/ack.aux) (./data/resume.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D4B3B951F740E682C2DD4FAB0A8981AD.
  ) 
 Here is how much of TeX's memory you used:
- 33702 strings out of 492933
- 660131 string characters out of 6136537
+ 33688 strings out of 492933
+ 659411 string characters out of 6136537
  753983 words of memory out of 5000000
- 37152 multiletter control sequences out of 15000+600000
- 702665 words of font info for 284 fonts, out of 8000000 for 9000
+ 37139 multiletter control sequences out of 15000+600000
+ 696819 words of font info for 282 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  66i,23n,96p,2531b,905s stack positions out of 5000i,500n,10000p,200000b,80000s
 
