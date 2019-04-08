@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  30 MAR 2019 10:13
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  4 APR 2019 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1670,7 +1670,10 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 [1
 
 
-] [2
+]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 12.045pt on input line 32.
+ [2
 
 
 ] [3] (./main.toc [4
@@ -1719,62 +1722,59 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
  [2]
 File: figures/Kwai.jpg Graphic file (type bmp)
 <figures/Kwai.jpg>
- [3] [4] [5] [6] [7]) [8]
+ [3] [4] [5] [6] [7] [8]) [9]
 \openout2 = `data/chap02.aux'.
 
  (./data/chap02.tex
 第2章
 File: figures/sys_arch.pdf Graphic file (type pdf)
 <use figures/sys_arch.pdf>
-File: figures/FansTop_process_cn.pdf Graphic file (type pdf)
-<use figures/FansTop_process_cn.pdf>
-[9
+[10
 
 
 
 ]
+File: figures/FansTop_process_cn.pdf Graphic file (type pdf)
+<use figures/FansTop_process_cn.pdf>
 Package hyperref Info: bookmark level for unknown equation defaults to 0 on inp
 ut line 36.
- [10]) [11]
+ [11]) [12]
 \openout2 = `data/chap03.aux'.
 
  (./data/chap03.tex
 第3章
-[12
+[13
 
 
 
-] [13]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.045pt on input line 75.
- [14] [15] [16]
+] [14] [15] [16] [17]
 File: figures/SimScene.pdf Graphic file (type pdf)
 <use figures/SimScene.pdf>
 File: figures/GBM_simulation.pdf Graphic file (type pdf)
 <use figures/GBM_simulation.pdf>
- [17] [18] [19]
+ [18] [19] [20]
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <11.04124> not availabl
 e
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 232.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 11.04124pt on input line 232.
- [20]) [21]
+ [21]) [22]
 \openout2 = `data/chap04.aux'.
 
  (./data/chap04.tex
 第4章
-[22
+[23
 
 
 
-] [23]
+] [24]
 File: figures/manifold.pdf Graphic file (type pdf)
 <use figures/manifold.pdf>
- [24] [25]
+ [25] [26]
 File: figures/sgnVSnew.pdf Graphic file (type pdf)
 <use figures/sgnVSnew.pdf>
- [26] [27]
+ [27] [28]
 File: figures/data_collection_area.png Graphic file (type bmp)
 <figures/data_collection_area.png>
 LaTeX Font Info:    Calculating math sizes for size <13.04874> on input line 15
@@ -1806,10 +1806,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 File: figures/RMSE_lam.pdf Graphic file (type pdf)
 <use figures/RMSE_lam.pdf>
-[28] [29]
+[29] [30]
 File: figures/RMSE_k.pdf Graphic file (type pdf)
 <use figures/RMSE_k.pdf>
- [30]
+ [31]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 195.
@@ -1820,48 +1820,48 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 File: figures/RMSE_N.pdf Graphic file (type pdf)
 <use figures/RMSE_N.pdf>
-[31] [32] [33]) [34]
+[32] [33] [34]) [35]
 \openout2 = `data/chap05.aux'.
 
  (./data/chap05.tex
 第5章
-[35
+[36
 
 
 
-] [36] [37]
+] [37] [38]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 82.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 9.03374pt on input line 87.
- [38] [39] [40]
+ [39] [40] [41]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 167.
- [41] [42] [43]
+ [42] [43] [44]
 File: figures/simulation.pdf Graphic file (type pdf)
 <use figures/simulation.pdf>
- [44] [45]
+ [45] [46]
 File: figures/FTR.pdf Graphic file (type pdf)
 <use figures/FTR.pdf>
- [46]
+ [47]
 File: figures/CTR.pdf Graphic file (type pdf)
 <use figures/CTR.pdf>
- [47]
+ [48]
 File: figures/LTR.pdf Graphic file (type pdf)
 <use figures/LTR.pdf>
 File: figures/HTR.pdf Graphic file (type pdf)
 <use figures/HTR.pdf>
- [48]) [49]
+ [49]) [50]
 \openout2 = `data/chap06.aux'.
 
 
 (./data/chap06.tex
 第6章
-[50
+[51
 
 
 
-] [51]) [52] (./main.lof [53
+] [52]) [53] (./main.lof [54
 
 
 
@@ -1870,14 +1870,14 @@ File: figures/HTR.pdf Graphic file (type pdf)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [54] (./main.lot)
+ [55] (./main.lot)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [55
+ [56
 
 
-] (./main.loe [56
+] (./main.loe [57
 
 
 ])
@@ -1885,29 +1885,29 @@ File: figures/HTR.pdf Graphic file (type pdf)
 \openout7 = `main.loe'.
 
 
-(./main.bbl [57] [58] [59
+(./main.bbl [58] [59] [60
 
 
-] [60]) [61]
+] [61]) [62]
 \openout2 = `data/ack.aux'.
 
- (./data/ack.tex [62
+ (./data/ack.tex [63
 
 
 
-]) [63
+]) [64
 
 
 ]
 (./data/appendix01.tex
 附录 A
-) [64
+) [65
 
 
 ]
 \openout2 = `data/resume.aux'.
 
- (./data/resume.tex) [65
+ (./data/resume.tex) [66
 
 
 
@@ -1926,7 +1926,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 1>
- [66
+ [67
 
 ]
 File: figures/scan-record.pdf Graphic file (type pdf)
@@ -1935,7 +1935,7 @@ File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
 File: figures/scan-record.pdf Graphic file (type pdf)
 <use figures/scan-record.pdf, page 2>
- [67]
+ [68]
 \tf@thm=\write8
 \openout8 = `main.thm'.
 
@@ -1947,15 +1947,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D4B3B951F740E682C2DD4FAB0A8981AD.
+(rerunfilecheck)             Checksum: D450313F152EEF5CA5952D86A86F849C.
  ) 
 Here is how much of TeX's memory you used:
- 33688 strings out of 492933
- 659411 string characters out of 6136537
- 753983 words of memory out of 5000000
- 37139 multiletter control sequences out of 15000+600000
+ 33701 strings out of 492933
+ 660288 string characters out of 6136537
+ 754250 words of memory out of 5000000
+ 37152 multiletter control sequences out of 15000+600000
  696819 words of font info for 282 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  66i,23n,96p,2531b,905s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (80 pages).
+Output written on main.pdf (81 pages).
