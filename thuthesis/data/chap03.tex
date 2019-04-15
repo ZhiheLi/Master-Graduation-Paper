@@ -184,7 +184,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 \begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{SimScene.pdf}
-	\caption{发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。}
+	\caption{仿真场景示意图，其中基站图标代表发射源位置，手机图标代表接收端位置。}
 	\label{fig:simscene}
 \end{figure}
 
@@ -195,11 +195,11 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 \begin{figure}[tb]
 	\centering
 	\includegraphics[width=\textwidth]{GBM_simulation.pdf}
-	\caption{100,000次仿真下，RMSE、置信区间和CRLB的结果。正方形是我们的算法GBM，上三角是ML，圆圈是LLS。点线为RMSE的95\%置信区间。实线是无偏估计的CRLB，虚线是通过蒙特卡洛法估计的GBM的CRLB。}
+	\caption{GBM、ML和LLS的RMSE、置信区间和CRLB的仿真结果。}
 	\label{fig:gbm_sim}
 \end{figure}
 
-如图\ref{fig:gbm_sim}所示为100,000次仿真下，RMSE及其95\%置信区间和CRLB的结果。从仿真结果中可以看到，当噪声标准差$\sigma<5$dBM时ML的RMSE略低于GBM。然而当标准差$\sigma>5$dBM时，GBM的RMSE明显小于ML而且统计显著。因为多径效应和阴影效应的影响，真实世界场景中往往噪声功率较大。下一小节中，我们将上述三种算法用于实测数据，结果将为我们提供一些更深入的见解。除此之外，CRLB的结果和GBM与ML的情况相似。虽然GBM的CRLB比它的RMSE小得多，但是我们不知道是否存在一种估计器可以取得这个下界。这或许是下一步研究的可能突破点。
+如图\ref{fig:gbm_sim}所示为100,000次仿真下，RMSE及其95\%置信区间和CRLB的结果。其中，正方形是我们的算法GBM的RMSE，上三角是ML的RMSE，圆圈是LLS的RMSE，点线为RMSE的95\%置信区间，实线是无偏估计的CRLB，虚线是通过蒙特卡洛法估计的GBM的CRLB。从仿真结果中可以看到，当噪声标准差$\sigma<5$dBm时ML的RMSE略低于GBM。然而当标准差$\sigma>5$dBm时，GBM的RMSE明显小于ML而且统计显著。因为多径效应和阴影效应的影响，真实世界场景中往往噪声功率较大。下一小节中，我们将上述三种算法用于实测数据，结果将为我们提供一些更深入的见解。除此之外，CRLB的结果和GBM与ML的情况相似。虽然GBM的CRLB比它的RMSE小得多，但是我们不知道是否存在一种估计器可以取得这个下界。这或许是下一步研究的可能突破点。
 
 注意到，当噪声的标准差大于9之后，GBM的RMSE会比无偏估计的CRLB还低，这也暗示了GBM是有偏估计否则CRLB应是RMSE的下界。根据\eqref{eq:mse}，虽然GBM是有偏估计，但是相比于方差的减小，偏置的稍微增加也不会使得总体MSE更大。从机器学习的角度来看，ML是一个低偏置、高方差的估计器，也就是说ML对于路径损耗模型“过拟合”了。而GBM类似于一种正则化版本，能够更好地适应高噪声数据。
 
@@ -213,7 +213,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 数据由车载路测仪在城市街道内运行采集移动通信基站的接收信号强度，其中共有超过120,000个基站。路测仪每5s采集一次GPS定位坐标、RSS、LAC (Location Area Code)、CID (Cell ID) 以及其他的基站信息。为了尽量最小化遮挡对信号衰减造成的影响，我们选择GSM（Global System for Mobile）信号用作测试。GSM的信号频段是900MHz和1.8GHz。
 
-在定位之前，数据需要经过预处理。首先，将GPS的经纬度坐标转换为笛卡尔直角坐标系。其次，为了减少计算时间并降低阴影效应的影响，RSS$<-60$dBM的点将被删除。最后，满足如下要求的基站（发射源，目标定位点）将被选中进行实验：
+在定位之前，数据需要经过预处理。首先，将GPS的经纬度坐标转换为笛卡尔直角坐标系。其次，为了减少计算时间并降低阴影效应的影响，RSS$<-60$dBm的点将被删除。最后，满足如下要求的基站（发射源，目标定位点）将被选中进行实验：
 \begin{itemize}
 	\item 信号制式是GSM；
 	\item 在基站的可接收范围内有至少10个接收点；

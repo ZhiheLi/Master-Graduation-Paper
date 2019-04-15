@@ -10,61 +10,59 @@
 \contentsline {section}{\numberline {1.3}论文主要研究内容及组织结构}{8}{section.1.3}% 
 \contentsline {chapter}{\numberline {第2章}基于用户定位的广告投放服务系统架构}{10}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}总体系统结构}{10}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}广告服务器系统架构}{11}{section.2.2}% 
-\contentsline {chapter}{\numberline {第3章}基于接收信号强度的几何模型发射源定位算法}{13}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}路径损耗模型和估计器}{13}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}路径损耗模型}{13}{subsection.3.1.1}% 
-\contentsline {subsection}{\numberline {3.1.2}传统最大似然估计器}{13}{subsection.3.1.2}% 
-\contentsline {subsection}{\numberline {3.1.3}基于几何的模型}{14}{subsection.3.1.3}% 
-\contentsline {section}{\numberline {3.2}克拉美罗下界（Cram\'{e}r-Rao Lower Bound, CRLB）}{15}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}无偏估计的CRLB}{16}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}有偏估计的CRLB}{16}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}RMSE的置信区间}{17}{section.3.3}% 
-\contentsline {section}{\numberline {3.4}数值仿真实验}{18}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}仿真场景与估计器设置}{18}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}仿真结果}{19}{subsection.3.4.2}% 
-\contentsline {section}{\numberline {3.5}实测数据验证}{20}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}数据介绍}{21}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}实测数据实验结果}{21}{subsection.3.5.2}% 
-\contentsline {section}{\numberline {3.6}本章小结}{22}{section.3.6}% 
-\contentsline {chapter}{\numberline {第4章}基于曼哈顿切线距离的指纹定位算法}{23}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}指纹定位中的常用距离度量方式}{23}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}常见度量方式}{23}{subsection.4.1.1}% 
-\contentsline {subsection}{\numberline {4.1.2}常用度量方式的弊端}{24}{subsection.4.1.2}% 
-\contentsline {section}{\numberline {4.2}指纹定位中的切线距离}{25}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}欧式切线距离}{26}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}曼哈顿切线距离}{27}{subsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}低计算复杂度的近似解法}{28}{subsection.4.2.3}% 
-\contentsline {section}{\numberline {4.3}实验与结果}{29}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}数据采集与预处理}{29}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}指数变换参数$\lambda $的选择}{30}{subsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.3.3}KNN中近邻数k的选择}{31}{subsection.4.3.3}% 
-\contentsline {subsection}{\numberline {4.3.4}切线距离的导数中参数$N$的选择}{32}{subsection.4.3.4}% 
-\contentsline {subsection}{\numberline {4.3.5}切线距离定位效果}{32}{subsection.4.3.5}% 
-\contentsline {section}{\numberline {4.4}本章小结}{34}{section.4.4}% 
-\contentsline {chapter}{\numberline {第5章}保量推荐下的最优广告投放算法}{36}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}PIKA算法原理}{36}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}问题定义}{36}{subsection.5.1.1}% 
-\contentsline {subsection}{\numberline {5.1.2}训练模块}{38}{subsection.5.1.2}% 
-\contentsline {subsection}{\numberline {5.1.3}投放模块}{41}{subsection.5.1.3}% 
-\contentsline {section}{\numberline {5.2}工程实现细节}{42}{section.5.2}% 
-\contentsline {subsection}{\numberline {5.2.1}曝光量保底策略}{42}{subsection.5.2.1}% 
-\contentsline {subsection}{\numberline {5.2.2}投放多于一个广告}{43}{subsection.5.2.2}% 
-\contentsline {subsection}{\numberline {5.2.3}小时需求量}{44}{subsection.5.2.3}% 
-\contentsline {section}{\numberline {5.3}实验与结果}{45}{section.5.3}% 
-\contentsline {subsection}{\numberline {5.3.1}仿真实验}{45}{subsection.5.3.1}% 
-\contentsline {subsection}{\numberline {5.3.2}线上实验设置}{46}{subsection.5.3.2}% 
-\contentsline {subsection}{\numberline {5.3.3}关键指标}{47}{subsection.5.3.3}% 
-\contentsline {subsection}{\numberline {5.3.4}线上实验结果}{47}{subsection.5.3.4}% 
-\contentsline {section}{\numberline {5.4}本章小结}{49}{section.5.4}% 
-\contentsline {chapter}{\numberline {第6章}结论与展望}{51}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}主要工作及贡献}{51}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}进一步工作展望}{52}{section.6.2}% 
-\contentsline {chapter}{插图索引}{54}{section*.31}% 
-\contentsline {chapter}{表格索引}{56}{section*.33}% 
-\contentsline {chapter}{公式索引}{57}{section*.35}% 
-\contentsline {chapter}{参考文献}{60}{section*.37}% 
-\contentsline {chapter}{致\hspace {1em}谢}{63}{section*.39}% 
-\contentsline {chapter}{声\hspace {1em}明}{64}{section*.41}% 
-\contentsline {chapter}{\numberline {附录 A}依期望采样的证明}{65}{appendix.A}% 
-\contentsline {chapter}{个人简历、在学期间发表的学术论文与研究成果}{66}{section*.45}% 
+\contentsline {section}{\numberline {2.2}定位服务器系统架构}{11}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}广告服务器系统架构}{12}{section.2.3}% 
+\contentsline {chapter}{\numberline {第3章}基于接收信号强度的几何模型发射源定位算法}{15}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}路径损耗模型和估计器}{15}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}路径损耗模型}{15}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}传统最大似然估计器}{15}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}基于几何的模型}{16}{subsection.3.1.3}% 
+\contentsline {section}{\numberline {3.2}克拉美罗下界（Cram\'{e}r-Rao Lower Bound, CRLB）}{17}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}无偏估计的CRLB}{18}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}有偏估计的CRLB}{18}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}RMSE的置信区间}{19}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}数值仿真实验}{20}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}仿真场景与估计器设置}{20}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}仿真结果}{21}{subsection.3.4.2}% 
+\contentsline {section}{\numberline {3.5}实测数据验证}{22}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}数据介绍}{22}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}实测数据实验结果}{23}{subsection.3.5.2}% 
+\contentsline {section}{\numberline {3.6}本章小结}{24}{section.3.6}% 
+\contentsline {chapter}{\numberline {第4章}基于曼哈顿切线距离的指纹定位算法}{25}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}指纹定位中的常用距离度量方式}{25}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}常见度量方式}{25}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}常用度量方式的弊端}{26}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {4.2}指纹定位中的切线距离}{27}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}欧式切线距离}{28}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}曼哈顿切线距离}{29}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}低计算复杂度的近似解法}{30}{subsection.4.2.3}% 
+\contentsline {section}{\numberline {4.3}实验与结果}{31}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}数据采集与预处理}{31}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}指数变换参数$\lambda $的选择}{32}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}KNN中近邻数$k$的选择}{33}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}切线距离的导数中参数$N$的选择}{34}{subsection.4.3.4}% 
+\contentsline {subsection}{\numberline {4.3.5}切线距离定位效果}{35}{subsection.4.3.5}% 
+\contentsline {section}{\numberline {4.4}本章小结}{36}{section.4.4}% 
+\contentsline {chapter}{\numberline {第5章}保量推荐下的最优广告投放算法}{38}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}PIKA算法原理}{38}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}问题定义}{38}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}训练模块}{40}{subsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.1.3}投放模块}{43}{subsection.5.1.3}% 
+\contentsline {section}{\numberline {5.2}工程实现}{44}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}曝光量保底策略}{44}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}投放多于一个广告}{45}{subsection.5.2.2}% 
+\contentsline {subsection}{\numberline {5.2.3}小时需求量}{46}{subsection.5.2.3}% 
+\contentsline {section}{\numberline {5.3}仿真实验}{47}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}线上A/B实验}{48}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}实验设置}{48}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}关键指标}{49}{subsection.5.4.2}% 
+\contentsline {subsection}{\numberline {5.4.3}实验结果}{50}{subsection.5.4.3}% 
+\contentsline {section}{\numberline {5.5}本章小结}{52}{section.5.5}% 
+\contentsline {chapter}{\numberline {第6章}结论与展望}{53}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}主要工作及贡献}{53}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}进一步工作展望}{54}{section.6.2}% 
+\contentsline {chapter}{参考文献}{56}{section*.32}% 
+\contentsline {chapter}{致\hspace {1em}谢}{59}{section*.34}% 
+\contentsline {chapter}{声\hspace {1em}明}{60}{section*.36}% 
+\contentsline {chapter}{\numberline {附录 A}依期望采样的证明}{61}{appendix.A}% 
+\contentsline {chapter}{个人简历、在学期间发表的学术论文与研究成果}{62}{section*.40}% 
