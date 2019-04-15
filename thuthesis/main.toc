@@ -41,7 +41,7 @@
 \contentsline {subsection}{\numberline {4.3.2}指数变换参数$\lambda $的选择}{32}{subsection.4.3.2}% 
 \contentsline {subsection}{\numberline {4.3.3}KNN中近邻数$k$的选择}{33}{subsection.4.3.3}% 
 \contentsline {subsection}{\numberline {4.3.4}切线距离的导数中参数$N$的选择}{34}{subsection.4.3.4}% 
-\contentsline {subsection}{\numberline {4.3.5}切线距离定位效果}{35}{subsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.3.5}切线距离定位效果}{34}{subsection.4.3.5}% 
 \contentsline {section}{\numberline {4.4}本章小结}{36}{section.4.4}% 
 \contentsline {chapter}{\numberline {第5章}保量推荐下的最优广告投放算法}{38}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}PIKA算法原理}{38}{section.5.1}% 

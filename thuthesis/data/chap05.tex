@@ -80,7 +80,7 @@ s.t. & \sum_i \bm{X}_{ij} = \bm{d}_j, \forall j, \\
 \end{equation}
 这样就已经减少到2个对偶变量了，而且其中一个还是对应等式约束的对偶变量$\bm{\alpha}$。因此，我们可以利用坐标下降法获得最优解，其中$\bm{\alpha}$和$\bm{\beta}$依次被求解并交替迭代，直到达到停止迭代判据或者迭代次数。因为$\bm{\alpha}$对应等式约束，因此在计算$\bm{\alpha}_j$时可以固定住$\bm{\beta}$，并行的解算，使得 $\sum_i{\bm{X}_{ij}} - d_j = 0, \forall j$。至于计算$\bm{\beta}$，可以先将其全部设为0，如果$\exists i$使得$\sum_j{\bm{X}_{ij}} \le 1$，则继续令$\bm{\beta}_i=0$；否则并行的计算$\bm{\beta}_i$使得$\sum_j{\bm{X}_{ij}} = 1$。算法\ref{alg:offline}完整的描述了离线最优解算法。
 
-\begin{algorithm}[tb]
+\begin{algorithm}[htb]
 	\caption{离线最优解算法} 
 	\label{alg:offline}
 	\begin{algorithmic}[1]
@@ -126,7 +126,7 @@ $\bm{\alpha}$是投放模块唯一需要从训练模块获得的参数，因此�
 
 首先，假设线上数据和线下数据完全相同，那么在训练模块计算出$\bm{\alpha}$之后，每当一个PV到来，它的广告投放概率向量可以根据\eqref{eq:xeq}求得。算法\ref{alg:online}详细描述了线上投放算法的具体步骤。该算法将输出对于该次PV来说的广告投放概率向量$\bm{p}$，之后我们将根据$\bm{p}$对广告进行采样，被选中的广告就会被投放给该次PV。请注意，不投放广告的概率是 $1-\sum_j \bm{p}_j$。最后，因为这里我们假设线上数据和线下数据完全相同，因此该算法的最终分数一定和线下计算的最优解相同。
 
-\begin{algorithm}[tb]
+\begin{algorithm}[htb]
 	\caption{线上投放概率算法} 
 	\label{alg:online}
 	\begin{algorithmic}[1]
@@ -218,14 +218,14 @@ $\bm{\alpha}$是投放模块唯一需要从训练模块获得的参数，因此�
 
 为了简单起见，我们从快手的数据库中提取了某个时间段内的所有页面访问，并按照时序划分为训练集和测试集，各有50万次PV。同时，我们选取400个广告投放，各有50的需求量。这里我们就不再引入召回机制，而是直接用预测服务器计算所有PV对这400个广告的点击率（Click-Through Rate, CTR），即$\bm{A}$中的分数就是CTR。在仿真实验中只有训练模块和正常的投放模块被实现了，即仿真中没有曝光量保底策略。此外，投放模块中计算出投放概率$\bm{p}$后没有后续的采样，而是把期望当做投放量。仿真中的评价指标是每次PV的平均期望CTR。
 
-\begin{figure}[tb]
+图\ref{fig:delivery}是这400个广告“投放”完成后对缺投量的统计。其中x轴的分辨率是3，即统计装桶的量化步长为3，正数代表缺投，负数代表超投。y轴是概率密度。柱状图代表统计装桶的结果，平滑曲线是用\textit{核密度估计法}估计出来的概率密度函数。这个分布非常像高斯分布，其中$\mu = -0.49$，$\sigma = 9.41$，而这个现象也与中心极限定理一致。测试集的需求量之和是20,000，实际投放量之和是21,219。最后，训练集的平均CTR=35.93\%，测试集平均CTR=35.85\%。作为对比，简单贪心法的平均CTR=27.80\%，即PIKA算法相对提升了29.0\%。
+
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{simulation.pdf}
 	\caption{仿真实验中测试数据集的缺投情况统计图。}
 	\label{fig:delivery}
 \end{figure}
-
-图\ref{fig:delivery}是这400个广告“投放”完成后对缺投量的统计。其中x轴的分辨率是3，即统计装桶的量化步长为3，正数代表缺投，负数代表超投。y轴是概率密度。柱状图代表统计装桶的结果，平滑曲线是用\textit{核密度估计法}估计出来的概率密度函数。这个分布非常像高斯分布，其中$\mu = -0.49$，$\sigma = 9.41$，而这个现象也与中心极限定理一致。测试集的需求量之和是20,000，实际投放量之和是21,219。最后，训练集的平均CTR=35.93\%，测试集平均CTR=35.85\%。作为对比，简单贪心法的平均CTR=27.80\%，即PIKA算法相对提升了29.0\%。
 
 从仿真实验的结果中我们可以总结出：
 \begin{itemize}
@@ -266,35 +266,35 @@ $\bm{\alpha}$是投放模块唯一需要从训练模块获得的参数，因此�
 
 因为在训练阶段可能会存在一些广告无解的情况，因此有必要统计无解广告的数量。在单个训练周期内，最多只有5\%的广告不可解，而且这些无解广告在不同训练周期内频繁变化，也就是说几乎没有广告会在其整个投放时段内一直都是无解的状态。但是，在快手的粉丝头条服务中有一类被称作“商业定向”的广告服务，需要广告主设定一些目标客户的属性，比如年龄等。如果这些目标设定的太详细而广告的需求量却很大，广告的召回量就会被迫减少甚至比需求量还少，这就会使得该广告一直无解。幸运的是，这类广告只占总广告数量不足0.1\%，而这些都是包括在上一段的缺投统计中的。
 
-\begin{figure}[tb]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{FTR.pdf}
 	\caption{PIKA算法和FC在一个月内的FTR比较以及相对提升。}
 	\label{fig:FTR}
 \end{figure}
 
-\begin{figure}[tb]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{CTR.pdf}
 	\caption{PIKA算法和FC在一个月内的CTR比较以及相对提升。}
 	\label{fig:CTR}
 \end{figure}
 
-PIKA和FC在投放效果指标上的比较以及相对提升展示在图\ref{fig:FTR}到\ref{fig:HTR}中，分别对应FTR、CTR、LTR和HTR。左子图中的蓝色圆形线代表着PIKA的指标，红色倒三角线代表着FC的指标。右子图中的黄色圆形线代表着PIKA相比于FC的相对提升。理想结果是PIKA的FTR、CTR和LTR均高于FC，而PIKA的HTR低于FC。但是，实际结果是PIKA的FTR除了一天之外，均高于FC；二者的CTR没有明显区别，PIKA的LTR稍高于FC，PIKA的HTR比FC稍微低一些。在这四个指标上，一个月以来总的相对提升幅度是：\textbf{FTR $+3.476\%$, CTR $+0.04463\%$, LTR $+0.7522\%$, HTR $-1.104\%$}。在\eqref{eq:score}中我们已经阐述过，分数是FTR和CTR的组合，但是FTR被给予的更高的权重，因为我们认为FTR更重要。LTR和HTR是次要指标，其实是以某种方式隐式地与FTR和CTR关联着。所以，PIKA在最重要的，或者主要优化的，指标上（FTR）优于FC，在其他指标上几乎没有明显区别，因此可以得出结论：在我们的实验中PIKA的表现优于FC。而且，FC在快手已经经过了长期的调试获得了稳定和良好的效果，但是PIKA在上线测试之前仅仅调试了几次而已，因此或许还存在一些改进空间。最后，线上实验中PIKA的提升效果不如仿真实验中提升那么明显是因为仿真实验中的基准是简单贪心法，而不是FC。除此之外，仿真中采用的评价指标是预测CTR之和，而不是真实的CTR，由预测分数以及采样操作带来的误差也会影响实验结果。
-
-\begin{figure}[tb]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{LTR.pdf}
 	\caption{PIKA算法和FC在一个月内的LTR比较以及相对提升。}
 	\label{fig:LTR}
 \end{figure}
 
-\begin{figure}[tb]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{HTR.pdf}
 	\caption{PIKA算法和FC在一个月内的HTR比较以及相对提升。}
 	\label{fig:HTR}
 \end{figure}
+
+PIKA和FC在投放效果指标上的比较以及相对提升展示在图\ref{fig:FTR}到\ref{fig:HTR}中，分别对应FTR、CTR、LTR和HTR。左子图中的蓝色圆形线代表着PIKA的指标，红色倒三角线代表着FC的指标。右子图中的黄色圆形线代表着PIKA相比于FC的相对提升。理想结果是PIKA的FTR、CTR和LTR均高于FC，而PIKA的HTR低于FC。但是，实际结果是PIKA的FTR除了一天之外，均高于FC；二者的CTR没有明显区别，PIKA的LTR稍高于FC，PIKA的HTR比FC稍微低一些。在这四个指标上，一个月以来总的相对提升幅度是：\textbf{FTR $+3.476\%$, CTR $+0.04463\%$, LTR $+0.7522\%$, HTR $-1.104\%$}。在\eqref{eq:score}中我们已经阐述过，分数是FTR和CTR的组合，但是FTR被给予的更高的权重，因为我们认为FTR更重要。LTR和HTR是次要指标，其实是以某种方式隐式地与FTR和CTR关联着。所以，PIKA在最重要的，或者主要优化的，指标上（FTR）优于FC，在其他指标上几乎没有明显区别，因此可以得出结论：在我们的实验中PIKA的表现优于FC。而且，FC在快手已经经过了长期的调试获得了稳定和良好的效果，但是PIKA在上线测试之前仅仅调试了几次而已，因此或许还存在一些改进空间。最后，线上实验中PIKA的提升效果不如仿真实验中提升那么明显是因为仿真实验中的基准是简单贪心法，而不是FC。除此之外，仿真中采用的评价指标是预测CTR之和，而不是真实的CTR，由预测分数以及采样操作带来的误差也会影响实验结果。
 
 \section{本章小结}
 

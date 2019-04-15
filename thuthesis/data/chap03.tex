@@ -181,7 +181,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 为了比较基于几何的模型（GBM），最大似然法（ML）以及线性最小二乘（LLS）估计器的定位效果，我们首先进行了仿真实验。仿真场景设置与S. Wang 和 R. Inkol~\cite{wang2011near} 的场景相同：发射源坐标为(0, 0)，十个接收者的位置坐标为 (-126, 62), (-339, 166), (390, 76), (-178, 333), (482, 122), (-234, 141), (230, -45), (-352, 279), (-104, 465), (366, -139)。上述坐标的单位是米，分布如图\ref{fig:simscene}所示。在生成接收信号数据时，路径损耗系数$\alpha=4$，噪声服从0均值高斯分布，标准差从1变化到15，常数$C=-40$。
 
-\begin{figure}[tb]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{SimScene.pdf}
 	\caption{仿真场景示意图，其中基站图标代表发射源位置，手机图标代表接收端位置。}
@@ -192,7 +192,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 \subsection{仿真结果}
 
-\begin{figure}[tb]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{GBM_simulation.pdf}
 	\caption{GBM、ML和LLS的RMSE、置信区间和CRLB的仿真结果。}
@@ -224,7 +224,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 
 \subsection{实测数据实验结果}
 
-\begin{table}[tbp]
+\begin{table}[htb]
 	\caption{实测数据实验结果}
 	\begin{center}
 		\begin{tabular}{cccc}
@@ -241,7 +241,7 @@ CI = (\sqrt{RMSE^2 - 1.96\frac{\sigma}{\sqrt{K}}}, \sqrt{RMSE^2 + 1.96\frac{\sig
 	\end{center}
 \end{table}
 
-如表\ref{tab:transmitter}所示，相比于ML和LLS，GBM可以在RMSE和MAE（Mean Absolute Error，平均绝对值误差）上均取得更小的误差。其中MAE由下式计算：
+表\ref{tab:transmitter}是实测数据的定位结果。相比于ML和LLS，GBM可以在RMSE和MAE（Mean Absolute Error，平均绝对值误差）上均取得更小的误差。其中MAE由下式计算：
 \begin{equation}
 MAE = \frac{\sum\limits_{k=1}^K{\left\| \widehat{\bm{\theta}} - \bm{\theta} \right\|}_2}{K}.
 \end{equation}
@@ -250,7 +250,7 @@ MAE = \frac{\sum\limits_{k=1}^K{\left\| \widehat{\bm{\theta}} - \bm{\theta} \rig
 
 \section{本章小结}
 
-本章中，我们提出了一种基于接收信号强度的、利用几何模型对发射源定位的算法。除此之外，一种节省计算时间的、利用蒙特卡洛法估计GBM的RMSE的克拉美罗下界的方法也被提出，同时我们给出基于中心极限定理计算RMSE的置信区间的方法。仿真实验显示，相比于ML，在噪声方差较大时GBM算法可以取得明显更高的定位精度，即意味着GBM更加稳健。无偏估计的CRLB和GBM的CRLB呈现出和上述现象相似的结果。为了验证仿真结果并测试算法实用性，我们还从商用蜂窝网内采集数据进行测试。实验结果显示，GBM在RMSE和MAE上均取得更小的定位误差，这个结果说明，当与ML对比时，GBM更适用于真实场景下的发射源定位需求。
+本章中，我们提出了一种基于接收信号强度的、利用几何模型对发射源定位的算法。除此之外，一种节省计算时间的、利用蒙特卡洛法估计GBM的RMSE的克拉美罗下界的方法也被提出，同时我们给出基于中心极限定理计算RMSE的置信区间的方法。仿真实验显示，相比于ML，在噪声方差较大时GBM算法可以取得明显更高的定位精度，即意味着GBM更加稳健。无偏估计的CRLB和GBM的CRLB呈现出和上述现象相似的结果。为了验证仿真结果并测试算法实用性，我们还从商用蜂窝网内采集数据进行测试。实验结果显示，GBM在RMSE和MAE上均取得更小的定位误差，相比于ML的RMSE和MAE分别降低了18.9\%和25.7\%。这个结果说明，当与ML对比时，GBM更适用于真实场景下的发射源定位需求。
 
 
 

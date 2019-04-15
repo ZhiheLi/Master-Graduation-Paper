@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  12 APR 2019 16:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.2.27)  15 APR 2019 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1626,7 +1626,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 9.03374pt on input line 32.
 
-Overfull \hbox (11.89807pt too wide) in paragraph at lines 32--32
+Overfull \hbox (27.24037pt too wide) in paragraph at lines 32--32
  [][] 
  []
 
@@ -1808,31 +1808,34 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 151.
 
+[31]
 File: figures/RMSE_lam.pdf Graphic file (type pdf)
 <use figures/RMSE_lam.pdf>
-[31] [32]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 184.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 184.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 184.
+
+[32]
 File: figures/RMSE_k.pdf Graphic file (type pdf)
 <use figures/RMSE_k.pdf>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 195.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 195.
+
 [33]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 195.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 195.
-
 File: figures/RMSE_N.pdf Graphic file (type pdf)
 <use figures/RMSE_N.pdf>
-[34] [35] [36]) [37]
+ [34] [35] [36]) [37]
 \openout2 = `data/chap05.aux'.
 
  (./data/chap05.tex
@@ -1857,12 +1860,11 @@ File: figures/FTR.pdf Graphic file (type pdf)
 <use figures/FTR.pdf>
 File: figures/CTR.pdf Graphic file (type pdf)
 <use figures/CTR.pdf>
- [50]
 File: figures/LTR.pdf Graphic file (type pdf)
 <use figures/LTR.pdf>
 File: figures/HTR.pdf Graphic file (type pdf)
 <use figures/HTR.pdf>
- [51]) [52]
+ [50] [51]) [52]
 \openout2 = `data/chap06.aux'.
 
 
@@ -1917,7 +1919,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  33655 strings out of 492933
  658202 string characters out of 6136537
- 752989 words of memory out of 5000000
+ 752920 words of memory out of 5000000
  37114 multiletter control sequences out of 15000+600000
  692290 words of font info for 272 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
