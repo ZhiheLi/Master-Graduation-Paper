@@ -65,7 +65,7 @@
 	\end{equation}
 	其中 $a$ 和 $b$ 是线性组合系数，这里的条件关注率CFR是指在用户已经点击广告的条件下，用户关注广告主的概率，即分数可以被改写为：
 	\begin{equation}
-	score = b \times CTR + a \times FTR), 
+	score = b \times CTR + a \times FTR, 
 	\end{equation}
 	预测服务器会分别预测出\eqref{eq:score}中的CTR和CFR，之后返回分数。预测CFR而不是直接预测FTR的原因可能是一般FTR都比较小，直接预测的准确率较低；
 	\item 投放广告，这也是第\ref{cha:allocation}章主要描述的部分。中心服务器在向投放策略服务器请求要投放的广告的同时，也会把召回的广告及其分数一起发送。计算完成后返回给中心服务器决定投放的广告。我们的算法和之前部署的流控算法唯一区别就在投放策略服务器上；
